@@ -1,20 +1,53 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Kyle Melton - one kick a** dude`,
+    description: ``,
+    author: `@kalm42`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      // images in src not for user control
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      // images for user control
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/img`,
+        name: `uploads`,
+      },
+    },
+    {
+      // load user controlled content
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/content` },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: { name: `uploads` },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: { maxWidth: 2048 },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: { destinationDir: `static` },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,8 +60,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 2 })],
+      },
+    },
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-postcss`,
+    `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
