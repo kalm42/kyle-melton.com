@@ -24,7 +24,7 @@ const BlogListTemplate = props => {
             large
           />
         )}
-        {!!(posts[1] && posts[2]) && (
+        {!!(posts[1] && posts[2]) ? (
           <>
             <ArticleBlock
               date={posts[1].node.frontmatter.date}
@@ -43,6 +43,17 @@ const BlogListTemplate = props => {
               half
             />
           </>
+        ) : (
+          !!posts[1] && (
+            <ArticleBlock
+              date={posts[1].node.frontmatter.date}
+              description={posts[1].node.frontmatter.description}
+              slug={posts[1].node.fields.slug}
+              thumbnail={posts[1].node.frontmatter.thumbnail}
+              title={posts[1].node.frontmatter.title}
+              large
+            />
+          )
         )}
         {!!posts[3] && (
           <ArticleBlock
@@ -54,7 +65,7 @@ const BlogListTemplate = props => {
             large
           />
         )}
-        {!!(posts[4] && posts[5] && posts[6]) && (
+        {!!(posts[4] && posts[5] && posts[6]) ? (
           <>
             <ArticleBlock
               date={posts[4].node.frontmatter.date}
@@ -78,8 +89,38 @@ const BlogListTemplate = props => {
               title={posts[6].node.frontmatter.title}
             />
           </>
+        ) : !!(posts[4] && posts[5]) ? (
+          <>
+            <ArticleBlock
+              date={posts[4].node.frontmatter.date}
+              description={posts[4].node.frontmatter.description}
+              slug={posts[4].node.fields.slug}
+              thumbnail={posts[4].node.frontmatter.thumbnail}
+              title={posts[4].node.frontmatter.title}
+              half
+            />
+            <ArticleBlock
+              date={posts[5].node.frontmatter.date}
+              description={posts[5].node.frontmatter.description}
+              slug={posts[5].node.fields.slug}
+              thumbnail={posts[5].node.frontmatter.thumbnail}
+              title={posts[5].node.frontmatter.title}
+              half
+            />
+          </>
+        ) : (
+          !!posts[4] && (
+            <ArticleBlock
+              date={posts[4].node.frontmatter.date}
+              description={posts[4].node.frontmatter.description}
+              slug={posts[4].node.fields.slug}
+              thumbnail={posts[4].node.frontmatter.thumbnail}
+              title={posts[4].node.frontmatter.title}
+              large
+            />
+          )
         )}
-        {!!(posts[7] && posts[8] && posts[9]) && (
+        {!!(posts[7] && posts[8] && posts[9]) ? (
           <>
             <ArticleBlock
               date={posts[7].node.frontmatter.date}
@@ -103,6 +144,36 @@ const BlogListTemplate = props => {
               title={posts[9].node.frontmatter.title}
             />
           </>
+        ) : !!(posts[7] && posts[8]) ? (
+          <>
+            <ArticleBlock
+              date={posts[7].node.frontmatter.date}
+              description={posts[7].node.frontmatter.description}
+              slug={posts[7].node.fields.slug}
+              thumbnail={posts[7].node.frontmatter.thumbnail}
+              title={posts[7].node.frontmatter.title}
+              half
+            />
+            <ArticleBlock
+              date={posts[8].node.frontmatter.date}
+              description={posts[8].node.frontmatter.description}
+              slug={posts[8].node.fields.slug}
+              thumbnail={posts[8].node.frontmatter.thumbnail}
+              title={posts[8].node.frontmatter.title}
+              half
+            />
+          </>
+        ) : (
+          !!posts[7] && (
+            <ArticleBlock
+              date={posts[7].node.frontmatter.date}
+              description={posts[7].node.frontmatter.description}
+              slug={posts[7].node.fields.slug}
+              thumbnail={posts[7].node.frontmatter.thumbnail}
+              title={posts[7].node.frontmatter.title}
+              large
+            />
+          )
         )}
         {!!posts[10] && (
           <ArticleBlock
@@ -114,7 +185,7 @@ const BlogListTemplate = props => {
             large
           />
         )}
-        {!!(posts[11] && posts[12] && posts[13]) && (
+        {!!(posts[11] && posts[12] && posts[13]) ? (
           <>
             <ArticleBlock
               date={posts[11].node.frontmatter.date}
@@ -138,6 +209,36 @@ const BlogListTemplate = props => {
               title={posts[13].node.frontmatter.title}
             />
           </>
+        ) : !!(posts[11] && posts[12]) ? (
+          <>
+            <ArticleBlock
+              date={posts[11].node.frontmatter.date}
+              description={posts[11].node.frontmatter.description}
+              slug={posts[11].node.fields.slug}
+              thumbnail={posts[11].node.frontmatter.thumbnail}
+              title={posts[11].node.frontmatter.title}
+              half
+            />
+            <ArticleBlock
+              date={posts[12].node.frontmatter.date}
+              description={posts[12].node.frontmatter.description}
+              slug={posts[12].node.fields.slug}
+              thumbnail={posts[12].node.frontmatter.thumbnail}
+              title={posts[12].node.frontmatter.title}
+              half
+            />
+          </>
+        ) : (
+          !!posts[11] && (
+            <ArticleBlock
+              date={posts[11].node.frontmatter.date}
+              description={posts[11].node.frontmatter.description}
+              slug={posts[11].node.fields.slug}
+              thumbnail={posts[11].node.frontmatter.thumbnail}
+              title={posts[11].node.frontmatter.title}
+              large
+            />
+          )
         )}
         {!!posts[14] && (
           <ArticleBlock

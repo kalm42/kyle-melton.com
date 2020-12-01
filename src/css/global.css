@@ -1,13 +1,26 @@
+:root {
+  --grey-1: #f2f2f2;
+  --grey-2: #bfbfbf;
+  --grey-3: #8c8c8c;
+  --grey-4: #595959;
+  --grey-5: #0d0d0d;
+  --gray-1: --grey-1;
+  --gray-2: --grey-2;
+  --gray-3: --grey-3;
+  --gray-4: --grey-4;
+  --gray-5: --grey-5;
+}
+
 body {
   min-height: 100vh;
-  background: #f2f2f2;
+  background: var(--grey-1);
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L",
     "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter",
     "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow",
     "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L",
     Georgia, serif;
   font-size: 18px;
-  color: #0d0d0d;
+  color: var(--grey-5);
 }
 
 h1,
@@ -36,7 +49,7 @@ h6 {
 h2,
 h4,
 h6 {
-  color: #595959;
+  color: var(--grey-4);
 }
 
 h1 {

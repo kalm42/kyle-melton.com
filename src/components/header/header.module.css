@@ -1,5 +1,5 @@
 .header {
-  background: #0d0d0d;
+  background: var(--grey-5);
   margin-bottom: 1.45rem;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .header__link {
-  color: #f2f2f2;
+  color: var(--grey-1);
   text-decoration: none;
 }
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styles from "./ArticleBlock.module.css"
-import { format, formatRelative, subDays } from "date-fns"
+import { format } from "date-fns"
 
 const ArticleBlock = props => {
   const { thumbnail, date, title, description, slug, large, half } = props
@@ -15,6 +15,8 @@ const ArticleBlock = props => {
     >
       <Link
         className={`${styles["ArticleBlock__link"]} ${
+          styles["ArticleBlock__container"]
+        } ${half ? styles["ArticleBlock__container__half"] : ""} ${
           large ? styles["ArticleBlock__container__large"] : ""
         }`}
         to={slug}
@@ -24,13 +26,13 @@ const ArticleBlock = props => {
         </div>
         <div
           className={`${styles["ArticleBlock__text"]} ${
-            large ? styles["ArticleBlock__text__large"] : ""
-          }`}
+            half ? styles["ArticleBlock__text__half"] : ""
+          } ${large ? styles["ArticleBlock__text__large"] : ""}`}
         >
           <div
             className={`${styles["ArticleBlock__head"]} ${
-              large ? styles["ArticleBlock__head__large"] : ""
-            }`}
+              half ? styles["ArticleBlock__head__half"] : ""
+            } ${large ? styles["ArticleBlock__head__large"] : ""}`}
           >
             <h3>{title}</h3>
             <h5>{format(new Date(date), "MMMM d, yyyy @ K:mm:s aaaa")}</h5>
