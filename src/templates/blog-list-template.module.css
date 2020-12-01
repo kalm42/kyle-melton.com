@@ -1,0 +1,6 @@
+.blog_list_template__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 6.66667%;
+  grid-auto-flow: dense;
+}

@@ -8,12 +8,53 @@ export const IndexPageTemplate = props => {
     <div>
       <header>
         <h1>{heading}</h1>
+        <h2>{heading}</h2>
         <h3>{subheading}</h3>
+        <h4>{subheading}</h4>
+        <h5>{subheading}</h5>
+        <h6>{subheading}</h6>
       </header>
       <main>
         <section>
           <h1>{mainpitch.title}</h1>
           <h3>{mainpitch.description}.</h3>
+          <p>
+            Occaecat labore culpa enim ipsum sint ut ex velit ipsum nostrud elit
+            laborum.
+          </p>
+          <p>
+            Qui anim veniam exercitation minim do. O | fficia incididunt tempor
+            enim esse deserunt. Officia Lorem adipisicing id ex id et nulla anim
+            sint consectetur Lorem sunt fugiat.
+          </p>
+          <p>
+            Ex irure fugiat in aute esse ex. Ipsum reprehenderit nostrud aliqua
+            ali | quip reprehenderit non labore irure esse dolor. In ut ipsum
+            fugiat eu commodo. Sunt ipsum reprehenderit adipisicing aute anim.
+            Tempor irure est anim tempor pariatur culpa culpa laboris. Excepteur
+            esse commodo mollit magna enim sint esse amet ex anim ad nostrud
+            elit. Sunt excepteur non ea culpa aute Lorem id amet incididunt
+            minim eu.
+          </p>
+
+          <p>
+            Reprehenderit voluptate magna dolore Lorem mollit exercitation.
+            Aliquip occaecat sit non minim. Deserunt eiusmod proident laboris
+            pariatur. Cupidatat irure deserunt consequat tempor sit exercitation
+            pariatur est dolor in dolor aliqua duis incididunt. Culpa
+            exercitation veniam dolore pariatur minim excepteur. Cillum sit
+            consectetur elit ipsum ipsum incididunt consequat occaecat qui
+            veniam velit. Officia officia pariatur occaecat fugiat veniam
+            nostrud.
+          </p>
+          <p>
+            Enim labore adipisicing duis do excepteur est labore ut in consequat
+            est qui ea. Consequat occaecat sit excepteur sit aliquip et
+            cupidatat cupidatat. Non proident dolore adipisicing minim et nisi
+            tempor aliquip ut culpa elit. Ea sunt do dolor dolore pariatur nulla
+            eiusmod amet aute esse duis sit irure labore. Sunt tempor mollit
+            culpa consectetur aliqua occaecat.
+          </p>
         </section>
 
         {/* RESUME */}

@@ -1,0 +1,21 @@
+.header {
+  background: #0d0d0d;
+  margin-bottom: 1.45rem;
+}
+
+.header__container {
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.45rem 1.0875rem;
+}
+
+.header__link {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.header__description {
+  color: #bfbfbf;
+}

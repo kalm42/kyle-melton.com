@@ -1,0 +1,66 @@
+body {
+  min-height: 100vh;
+  background: #f2f2f2;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L",
+    "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter",
+    "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow",
+    "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L",
+    Georgia, serif;
+  font-size: 18px;
+  color: #0d0d0d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans",
+    "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  padding: 1rem 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+h2,
+h4,
+h6 {
+  color: #595959;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+
+p {
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  min-width: 350px;
+  max-width: 560px;
+}
