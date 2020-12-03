@@ -4,17 +4,35 @@ import React from "react"
 import styles from "./header.module.css"
 
 const Header = props => {
-  const { siteTitle = "", siteDescription = "" } = props
+  const { siteTitle = "" } = props
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
-        <h1 style={{ margin: 0 }}>
+        <h1>
           <Link to="/" className={styles.header__link}>
             {siteTitle}
           </Link>
         </h1>
-        <h3 className={styles.header__description}>{siteDescription}</h3>
       </div>
+      <nav className={styles["header__nav"]}>
+        <ul className={styles["header__menu"]}>
+          <li className={styles["header__menuitem"]}>
+            <Link className={styles["header__link"]} to="/resume">
+              Resume
+            </Link>
+          </li>
+          <li className={styles["header__menuitem"]}>
+            <Link className={styles["header__link"]} to="/blog">
+              Blog
+            </Link>
+          </li>
+          <li className={styles["header__menuitem"]}>
+            <Link className={styles["header__link"]} to="/contact">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }

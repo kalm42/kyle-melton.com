@@ -1,10 +1,10 @@
 .header {
   background: var(--grey-5);
   margin-bottom: 1.45rem;
+  display: flex;
 }
 
 .header__container {
-  margin: 0 auto;
   display: flex;
   align-items: baseline;
   gap: 1rem;
@@ -16,6 +16,40 @@
   text-decoration: none;
 }
 
+.header__link::before {
+  content: "";
+  position: relative;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 5px;
+  background: var(--grey-1);
+  transform: scaleX(0.25);
+  transform-origin: 0 0;
+  transition: all 0.4s;
+  display: block;
+}
+
+.header__link:hover::before {
+  transform: scaleX(1);
+}
+
 .header__description {
   color: #bfbfbf;
+}
+
+.header__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+}
+.header__menuitem {
+  font-family: Arial, Helvetica, sans-serif;
 }

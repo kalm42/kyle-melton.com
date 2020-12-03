@@ -21,6 +21,10 @@ body {
     Georgia, serif;
   font-size: 18px;
   color: var(--grey-5);
+
+  @media screen and (max-width: 880px) {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -54,15 +58,19 @@ h6 {
 
 h1 {
   font-size: 2rem;
+  font-weight: 900;
 }
 h2 {
   font-size: 1.5rem;
+  font-weight: 800;
 }
 h3 {
   font-size: 1.17rem;
+  font-weight: 700;
 }
 h4 {
   font-size: 1rem;
+  font-weight: 450;
 }
 h5 {
   font-size: 0.83rem;
@@ -76,4 +84,9 @@ p {
   line-height: 1.5;
   min-width: 350px;
   max-width: 560px;
+
+  @media screen and (max-width: 880px) {
+    min-width: 310px;
+    max-width: 500px;
+  }
 }

@@ -4,8 +4,21 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  min-height: 63vh;
 }
 
 .content {
   padding: 0 5.8%;
+}
+
+.footer {
+  background: var(--grey-5);
+  color: var(--grey-1);
+  padding: 3rem;
+  margin-top: 1rem;
+}
+
+.footer__widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
