@@ -12,7 +12,7 @@ tags:
 
 I found this over [here](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/error_boundaries/) and I'm shamelessly copying it here for quick reference.
 
-```
+```javascript{numberLines: true}
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
