@@ -1,7 +1,6 @@
 ---
 slug: "/why-not-to-use-wordpress"
 title: "Why Not To Use WordPress"
-date: "2019-04-09"
 templateKey: blog-post
 date: 2019-04-09T15:04:10.000Z
 thumbnail: /img/why-not-to-use-wordpress.png
