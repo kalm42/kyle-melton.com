@@ -1,0 +1,80 @@
+.gatsby-highlight {
+  padding: 2rem 1rem 1rem 1rem;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.gatsby-highlight::before {
+  content: "";
+  height: 14px;
+  width: 54px;
+  background-image: url("../images/carbon.svg");
+  display: block;
+  position: relative;
+  top: -10px;
+}
+
+pre[class*="language-"] {
+  padding: unset;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #ffffff;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: blue;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+  color: darkred;
+}
+
+.token.function,
+.token.class-name {
+  color: black;
+}
+
+.token.punctuation {
+  color: goldenrod;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: green;
+}
+.line-numbers .line-numbers-rows {
+  border-right: unset;
+}
+
+.line-numbers-rows > span:before {
+  color: darkolivegreen;
+}

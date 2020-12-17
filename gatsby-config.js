@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Kyle Melton - one kick a** dude`,
-    description: ``,
+    title: `Kyle Melton`,
+    description: `My resume, my blog, my website`,
     author: `@kalm42`,
   },
   plugins: [
@@ -34,6 +34,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+          },
+          {
             resolve: `gatsby-remark-relative-images`,
             options: { name: `uploads` },
           },
@@ -48,6 +51,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -58,12 +62,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 2 })],
       },
     },
     `gatsby-plugin-netlify-cms`,

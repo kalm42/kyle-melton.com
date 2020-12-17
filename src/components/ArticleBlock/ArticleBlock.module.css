@@ -1,0 +1,120 @@
+.ArticleBlock {
+  padding: 5vw 0;
+  grid-column: span 2;
+
+  @media screen and (max-width: 1200px) {
+    grid-column: 1 / -1;
+  }
+}
+
+.ArticleBlock__half {
+  grid-column: span 3;
+
+  @media screen and (max-width: 1200px) {
+    grid-column: 1 / -1;
+  }
+}
+
+.ArticleBlock__large {
+  grid-column: 1 / -1;
+}
+
+.ArticleBlock__link {
+  text-decoration: none;
+  color: unset;
+}
+
+.ArticleBlock__container {
+  display: block;
+
+  @media screen and (880px <= width <= 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px 6.66667%;
+    grid-auto-flow: dense;
+  }
+}
+
+.ArticleBlock__container__half {
+  @media screen and (880px <= width <= 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px 6.66667%;
+    grid-auto-flow: dense;
+  }
+}
+
+.ArticleBlock__container__large {
+  @media screen and (min-width: 880px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px 6.66667%;
+    grid-auto-flow: dense;
+  }
+}
+
+.ArticleBlock__image {
+  grid-column-end: span 2;
+}
+
+.ArticleBlock__text {
+  margin-top: 30px;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ArticleBlock__text__large {
+  display: flex;
+  flex-direction: column;
+}
+
+.ArticleBlock__text__half {
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ArticleBlock__head {
+  margin-bottom: 1rem;
+  @media screen and (max-width: 1200px) {
+    flex-grow: 1;
+  }
+}
+
+.ArticleBlock__head__large {
+  flex-grow: 1;
+}
+.ArticleBlock__head__large > h3 {
+  padding: 0;
+}
+
+.ArticleBlock__head__half {
+  @media screen and (max-width: 1200px) {
+    flex-grow: 1;
+  }
+}
+
+.ArticleBlock__head::before {
+  content: "";
+  position: relative;
+  left: 0;
+  right: 0;
+  top: -30px;
+  height: 5px;
+  background: currentColor;
+  transform: scaleX(0.25);
+  transform-origin: 0 0;
+  transition: all 0.4s;
+  display: block;
+}
+
+.ArticleBlock > a:hover .ArticleBlock__head::before {
+  transform: scaleX(1);
+}
+
+.ArticleBlock__intro {
+  margin: -0.9rem 0;
+}
