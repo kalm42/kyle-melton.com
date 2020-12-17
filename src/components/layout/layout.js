@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Header from "../header"
 import styles from "./layout.module.css"
 
@@ -36,12 +36,19 @@ const Layout = ({ children }) => {
         <section className={styles["footer__widgets"]}>
           <section>
             <h1>Contact Me</h1>
-            <ul>
+            <ul className={styles["footer__list"]}>
               <li>
-                <a href="tel:+19512127174">(951)212-7174</a>
+                <a className={styles["footer__link"]} href="tel:+19512127174">
+                  (951)212-7174
+                </a>
               </li>
               <li>
-                <a href="mailto:kyle@kyle-melton.com">Kyle@kyle-melton.com</a>
+                <a
+                  className={styles["footer__link"]}
+                  href="mailto:kyle@kyle-melton.com"
+                >
+                  Kyle [at] kyle-melton.com
+                </a>
               </li>
             </ul>
           </section>
@@ -51,11 +58,31 @@ const Layout = ({ children }) => {
           </section>
           <section>
             <h1>Social Media</h1>
-            <ul>
-              <li>LinkedIn</li>
-              <li>GitHub</li>
-              <li>Twitter</li>
-              <li>RSS Feed</li>
+            <ul className={styles["footer__list"]}>
+              <li>
+                <a
+                  className={styles["footer__link"]}
+                  href="https://www.linkedin.com/in/kyle-al-melton/"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  className={styles["footer__link"]}
+                  href="https://github.com/kalm42/"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  className={styles["footer__link"]}
+                  href="https://twitter.com/kalm42"
+                >
+                  Twitter
+                </a>
+              </li>
             </ul>
           </section>
         </section>
@@ -63,11 +90,6 @@ const Layout = ({ children }) => {
           <p>
             <small>© {new Date().getFullYear()} Kyle Melton</small>
           </p>
-          <ul>
-            <li>
-              <Link>Privacy Policy</Link>
-            </li>
-          </ul>
         </section>
       </footer>
     </>

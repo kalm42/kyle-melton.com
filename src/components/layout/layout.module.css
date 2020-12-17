@@ -22,3 +22,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__link {
+  color: var(--grey-2);
+}
