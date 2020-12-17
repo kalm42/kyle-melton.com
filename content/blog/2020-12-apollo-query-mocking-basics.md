@@ -1,16 +1,17 @@
 ---
 slug: /apollo-query-mocking-basics
-date: 2020-12-14T19:57:43.522Z
-title: Apollo Query Mocking Basics
 templateKey: blog-post
-thumbnail: /img/apollo-query-mocking-basics.png
-description: desc
+title: Apollo Query Mocking Basics
+description: How to setup basic apollo graphql query mocking for your jest
+  tests. Copy and paste ready.
 tags:
   - apollo
   - mock
   - jest
   - testing
   - graphql
+thumbnail: /img/apollo-query-mocking-basics.png
+date: 2020-12-14T19:57:43.522Z
 ---
 
 I've written this blog for the same reason I've written every other blog post. I had to look this up. So now I'll have a quick access resource for it.
