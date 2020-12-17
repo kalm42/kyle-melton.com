@@ -58,3 +58,87 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/contact.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: Phone Number, name: phoneNumber, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Address, name: address, widget: text }
+      - name: "resume"
+        label: "Resume"
+        file: "content/resume.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "resume-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Work Experience",
+              name: "workExperience",
+              widget: "list",
+              add_to_top: true,
+              fields:
+                - { label: "Company", name: "company", widget: "string" }
+                - { label: "Job Title", name: "jobTitle", widget: "string" }
+                - { label: "Start Date", name: "startDate", widget: "date" }
+                - { label: "End Date", name: "endDate", widget: "date" }
+                - {
+                    label: "Job Description",
+                    name: "jobDescription",
+                    widget: "text"
+                  }
+            }
+          - {
+              label: "Education",
+              name: "education",
+              widget: "list",
+              add_to_top: true,
+              fields:
+                - { label: "College", name: "college", widget: "string" }
+                - { label: "Degree", name: "degree", widget: "string" }
+                - {
+                    label: "Graduation Date",
+                    name: "graduationDate",
+                    widget: "date"
+                  }
+            }
+          - {
+              label: "Certifications",
+              name: "certifications",
+              widget: "list",
+              add_to_top: true,
+              fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+            }
+          - {
+              label: "Projects",
+              name: "projects",
+              widget: "list",
+              add_to_top: true,
+              fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - {
+                    label: "Tags",
+                    name: "tags",
+                    widget: "list",
+                    field: { label: "Tag", name: "tag", widget: "string" }
+                  }
+            }
+          - {
+              label: "Skills",
+              name: "skills",
+              widget: "list",
+              field: { label: "Skill", name: "skill", widget: "string" }
+            }
