@@ -1,14 +1,15 @@
 ---
 slug: /resources
+templateKey: blog-post
 title: Resources I Use
-date: 2019-09-12T15:04:10.000Z
-description: Resources I use to get stuff done. Everything from other blogs, images, patters, icons.
+description: Resources I use to get stuff done. Everything from other blogs,
+  images, patters, icons.
 tags:
   - css
   - html
   - grid
-templateKey: "blog-post"
 thumbnail: /img/resources-i-use.png
+date: 2019-09-12T15:04:10.000Z
 ---
 
 # Resources
@@ -48,6 +49,17 @@ Purchase repeating pattern assets.
 - [unsplash](https://unsplash.com/)
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/)
+
+## Stock Art
+
+- [undraw](https://undraw.co/)
+- [Open Peeps](https://www.openpeeps.com/)
+- [Free Illustrations](https://freeillustrations.xyz/)
+- [Humaaans](https://www.humaaans.com/)
+
+Doesn't have stock art, but is software for stock art.
+- [Blush](https://blush.design/)
+
 
 ## Icons
 
