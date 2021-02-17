@@ -16,11 +16,9 @@ My generic mocking code for Higher Order Components (HOC) and Context. I ran int
 ```javascript
 jest.mock("@HOC", () => {
   return {
-    withHOC: () => {
-      return (Component) => {
-        return (props) => {
-          return <Component newProp={jest.fn} {...props} />;
-        }
+    withHOC: (Component) => {
+      return (props) => {
+        return <Component newProp={jest.fn} {...props} />;
       }
     }
   }
