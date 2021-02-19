@@ -7,7 +7,7 @@ description: "WIP: So, I've been teaching a friend JavaScript. During that I've
   Switft, and PHP to, what I would consider, a proficient level I think I'm
   capable of making that determination."
 thumbnail: /img/questions-to-answer-when-learning-a-new-language.png
-date: 2021-02-19T18:53:23.054Z
+date: 2021-02-19T22:53:23.054Z
 ---
 So, I've been teaching a friend JavaScript. During that I've been quizing him and it struck me that many of these questions are rather broad and could be applied to multiple languages. Having learned JavaScript, Switft, and PHP to, what I would consider, a proficient level I think I'm capable of making that determination.
 
