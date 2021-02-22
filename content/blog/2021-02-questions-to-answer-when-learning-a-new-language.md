@@ -18,7 +18,13 @@ I played around a little with Rust but I have been planing on getting a lot bett
 I hope you find this useful. Give me a shout on twitter if you do. @kalm42
 
 1. What are the primitive types?
-   a. string, boolean, number, null, undefined, object, symbol
+  - string
+  - boolean
+  - number
+  - null
+  - undefined
+  - object
+  - symbol
 2. What is a string?
    // I know this might seem stupid, but it's best to say the obvious to avoid overlooking potential knowledge gaps.
 3. What is a boolean?
@@ -135,7 +141,7 @@ if(condition) {
 ```
 
 65. What is the logical and?
-    a. Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
+  - Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
     b. Pro-tip! The logical and will not evaluate the right hand side if the left hand side evaluates to false.
 66. What is the logical or?
     a. Also like mathematics, the logical or will return true if either the left hand side or the right hand side of the operator evaluates to true. If both evaluate to false then the logical or will return false.
