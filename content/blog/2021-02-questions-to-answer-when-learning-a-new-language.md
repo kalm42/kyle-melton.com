@@ -18,13 +18,14 @@ I played around a little with Rust but I have been planing on getting a lot bett
 I hope you find this useful. Give me a shout on twitter if you do. @kalm42
 
 1. What are the primitive types?
-  - string
-  - boolean
-  - number
-  - null
-  - undefined
-  - object
-  - symbol
+  * string
+  * boolean
+  * number
+  * null
+  * undefined
+  * object
+  * symbol
+
 2. What is a string?
    // I know this might seem stupid, but it's best to say the obvious to avoid overlooking potential knowledge gaps.
 3. What is a boolean?
@@ -141,8 +142,10 @@ if(condition) {
 ```
 
 65. What is the logical and?
-  - Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
-    b. Pro-tip! The logical and will not evaluate the right hand side if the left hand side evaluates to false.
+
+* Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
+  b. Pro-tip! The logical and will not evaluate the right hand side if the left hand side evaluates to false.
+
 66. What is the logical or?
     a. Also like mathematics, the logical or will return true if either the left hand side or the right hand side of the operator evaluates to true. If both evaluate to false then the logical or will return false.
 67. What is truthy?
@@ -187,31 +190,31 @@ switch(variableToCheck) {
 ```
 
 75. How do you delay code execution for a set amount of time?
-  a. With the build in function `setTimeout` 
+    a. With the build in function `setTimeout` 
 76. How do you repeatedly execute a block of code on an interval?
-  a. With the built in function `setInterval` 
+    a. With the built in function `setInterval` 
 77. What is the syntax for setTimeout?
-  a. There's a lot more than the snippet below so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+    a. There's a lot more than the snippet below so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
 
 ```javascript
 setTimeout(function () {}, delayTimeInMiliseconds);
 ```
 
 78. What is the syntax for setInterval?
-  a. There's more than the snippet below shows so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+    a. There's more than the snippet below shows so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 ```javascript
 setInterval(function () {}, delayTimeInMiliseconds);
 ```
 
 79. Can you control the order of properties in an object?
-  a. No.
+    a. No.
 80. What kind of values can be stored in an object? *The value of a key, value pair.
-  a. Anything.
+    a. Anything.
 81. What kind of values can be used as a propperty in an object. *The key in a key value pair.
-  a. String, number, or any JS valid naming convention.
+    a. String, number, or any JS valid naming convention.
 82. How do you prevent object mutation?
-  a. `Object.freeze(objectVariable);`
+    a. `Object.freeze(objectVariable);`
 83. How can you access properties in an object?
 
 ```javascript
@@ -229,7 +232,7 @@ variable[get()];
 ```
 
 84. How do you access a deeply nested property?
-  a. The same way just repeadetly and possibly interchangeably.
+    a. The same way just repeadetly and possibly interchangeably.
 
 ```javascript
 const variable = {
@@ -253,7 +256,7 @@ variable[get()].anotherProp[`a-${what()}-prop`];
 ```
 
 85. How do you remove a property from an object?
-  a. With the `delete` keyword.
+    a. With the `delete` keyword.
 
 ```javascript
 const variable = {
@@ -263,7 +266,7 @@ delete variable.prop
 ```
 
 86. How do you add a property to an object?
-  a. You assign it a value.
+    a. You assign it a value.
 
 ```javascript
 const variable = {}
@@ -274,7 +277,7 @@ variable['another prop'] = null;
 ```
 
 87. What is a method?
-  a. In JS it's a function in an object. In all other languages it's a function in a class.
+    a. In JS it's a function in an object. In all other languages it's a function in a class.
 
 ```javascript
 const variable = {
@@ -285,7 +288,7 @@ const variable = {
 ```
 
 88. What is this?
-  a. `this` is a reference to the context a method is called in. There are many, many caveots. In the snippet below `this` refers to the instance of the variable calling the method.
+    a. `this` is a reference to the context a method is called in. There are many, many caveots. In the snippet below `this` refers to the instance of the variable calling the method.
 
 ```javascript
 const variable = {
@@ -300,7 +303,7 @@ variable.meothd() // 'Bye'
 ```
 
 89. Do arrow function scope this?
-  a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherrieted from the parent.
+    a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherrieted from the parent.
 
 ```javascript
 const parentVariable = {
@@ -316,7 +319,6 @@ parentVariable.prop.method() // 'Hi Kyle', because this is inherrited
 ```
 
 90. What is assignment by value?
-  a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunck of memory is populated with whatever the value is.
-
+    a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunck of memory is populated with whatever the value is.
 91. What is assignment by referrence?
-  a. When assigning a variable a value by referrence the variable does not get a chunck of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunck of memory affect all variables referencing that chunk of memory.
+    a. When assigning a variable a value by referrence the variable does not get a chunck of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunck of memory affect all variables referencing that chunk of memory.
