@@ -18,59 +18,69 @@ I played around a little with Rust but I have been planing on getting a lot bett
 I hope you find this useful. Give me a shout on twitter if you do. @kalm42
 
 1. What are the primitive types?
-  * string
-  * boolean
-  * number
-  * null
-  * undefined
-  * object
-  * symbol
 
+   * string
+   * boolean
+   * number
+   * null
+   * undefined
+   * object
+   * symbol
 2. What is a string?
+
    // I know this might seem stupid, but it's best to say the obvious to avoid overlooking potential knowledge gaps.
 3. What is a boolean?
 4. What is a number?
+
    // This might be better for the other languages where there's a difference between signed and unsigned, 32 bit or 64 bit, floats or ints, but still important to state the obvious.
 5. What is null?
 6. What is undefined?
 7. What is an object?
 8. What is a symbol?
 9. How do you define a string?
-   a. '', or "", or 
+
+   * '', or "", or 
 10. How do you escape a character?
-    a. `\`
+
+    *  `\`
 11. How do you concatenate two strings?
 12. How do you do string interpolation?
 13. How do you define an object?
 14. How do you make a code block?
 15. How do you write an if statement?
 16. Can var or let be mutated? 
-    // Maybe change this to be basic variable mutation vs constants
+
+    * // Maybe change this to be basic variable mutation vs constants
 17. When do you declare a variable? 
-    // So because of JS hoisting this is a valid question to ask with JavaScript I wonder if it's valid to ask if there are considerations in other languages as to when it is best to define/declare variables.
+
+    * // So because of JS hoisting this is a valid question to ask with JavaScript I wonder if it's valid to ask if there are considerations in other languages as to when it is best to define/declare variables.
 18. When do you use var? 
-    // JS specific, idk if that's at all relevant to other languages.
+
+    * // JS specific, idk if that's at all relevant to other languages.
 19. What is the variable naming convention?
 20. What is the function naming convention?
 21. What is the class naming convention?
 22. What are invalid names?
 23. What is the modulo operator?
 24. Can you do math with strings?
-    a. Yes, but no. // insert that gif
+
+    * Yes, but no. // insert that gif
 25. Why make an object? 
-    // maybe extend that to similar things in other languages like the hash map etc.
+
+    * // maybe extend that to similar things in other languages like the hash map etc.
 26. Can you sort object keys?
 27. How can you access object properties?
 28. What are the various equality operator's syntax.
-    a. `<` Less than
-    b. `>` greater than
-    c. `<=` Less than or equal to
-    d. `>=` Greater than or equal to
-    e. `==` equal to with type coercion
-    f. `!=` not equal to, with type coercion
-    g. `===` equal to without type coercion
-    h. `!==` not equal to, without type coercion
-    i. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+
+    * `<` Less than
+      b. `>` greater than
+      c. `<=` Less than or equal to
+      d. `>=` Greater than or equal to
+      e. `==` equal to with type coercion
+      f. `!=` not equal to, with type coercion
+      g. `===` equal to without type coercion
+      h. `!==` not equal to, without type coercion
+      i. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 29. What is type coercion?
 30. Why make a function?
 31. How do you define a function?
@@ -288,7 +298,7 @@ const variable = {
 ```
 
 88. What is this?
-    a. `this` is a reference to the context a method is called in. There are many, many caveots. In the snippet below `this` refers to the instance of the variable calling the method.
+    a. `this` is a reference to the context a method is called in. There are many, many caveats. In the snippet below `this` refers to the instance of the variable calling the method.
 
 ```javascript
 const variable = {
@@ -299,11 +309,11 @@ const variable = {
 }
 variable.method() // 'Hi'
 variable.prop = false;
-variable.meothd() // 'Bye'
+variable.method() // 'Bye'
 ```
 
 89. Do arrow function scope this?
-    a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherrieted from the parent.
+    a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherited from the parent.
 
 ```javascript
 const parentVariable = {
@@ -315,10 +325,10 @@ const parentVariable = {
     }
   }
 }
-parentVariable.prop.method() // 'Hi Kyle', because this is inherrited
+parentVariable.prop.method() // 'Hi Kyle', because this is inherited
 ```
 
 90. What is assignment by value?
-    a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunck of memory is populated with whatever the value is.
-91. What is assignment by referrence?
-    a. When assigning a variable a value by referrence the variable does not get a chunck of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunck of memory affect all variables referencing that chunk of memory.
+    a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunk of memory is populated with whatever the value is.
+91. What is assignment by reference?
+    a. When assigning a variable a value by reference the variable does not get a chunk of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunk of memory affect all variables referencing that chunk of memory.
