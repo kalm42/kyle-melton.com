@@ -206,3 +206,111 @@ setInterval(function () {}, delayTimeInMiliseconds);
   a. String, number, or any JS valid naming convention.
 82. How do you prevent object mutation?
   a. `Object.freeze(objectVariable);`
+83. How can you access properties in an object?
+
+```javascript
+const variable = {
+  prop: true,
+}
+variable.prop;
+variable['prop'];
+const p = 'prop';
+variable[p];
+function get() {
+  return 'prop';
+}
+variable[get()];
+```
+
+84. How do you access a deeply nested property?
+  a. The same way just repeadetly and possibly interchangeably.
+
+```javascript
+const variable = {
+  prop: {
+    anotherProp: {
+      'a-third-prop': true
+    }
+  },
+}
+variable.prop.anotherProp['a-third-prop'];
+variable['prop']['anotherProp']['a-third-prop'];
+const p = 'prop';
+variable[p].anotherProp['a-third-prop'];
+function get() {
+  return 'prop';
+}
+function what() {
+  return 'third'
+}
+variable[get()].anotherProp[`a-${what()}-prop`];
+```
+
+85. How do you remove a property from an object?
+  a. With the `delete` keyword.
+
+```javascript
+const variable = {
+  prop: 'something'
+}
+delete variable.prop
+```
+
+86. How do you add a property to an object?
+  a. You assign it a value.
+
+```javascript
+const variable = {}
+
+variable.prop = null;
+variable['another prop'] = null;
+// so on an so forth
+```
+
+87. What is a method?
+  a. In JS it's a function in an object. In all other languages it's a function in a class.
+
+```javascript
+const variable = {
+  method: function () {
+    return `I'm a method.`
+  }
+}
+```
+
+88. What is this?
+  a. `this` is a reference to the context a method is called in. There are many, many caveots. In the snippet below `this` refers to the instance of the variable calling the method.
+
+```javascript
+const variable = {
+  prop: true,
+  method: function () {
+    return this.prop ? 'Hi' : 'Bye'
+  }
+}
+variable.method() // 'Hi'
+variable.prop = false;
+variable.meothd() // 'Bye'
+```
+
+89. Do arrow function scope this?
+  a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherrieted from the parent.
+
+```javascript
+const parentVariable = {
+  name: 'Kyle',
+  prop: {
+    name: 'Tyler',
+    method: () => {
+      return `Hi ${this.name}`
+    }
+  }
+}
+parentVariable.prop.method() // 'Hi Kyle', because this is inherrited
+```
+
+90. What is assignment by value?
+  a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunck of memory is populated with whatever the value is.
+
+91. What is assignment by referrence?
+  a. When assigning a variable a value by referrence the variable does not get a chunck of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunck of memory affect all variables referencing that chunk of memory.
