@@ -1,16 +1,18 @@
 ---
 slug: /matrial-ui-jest-snapshot-class-names
-date: 2020-06-19T19:57:43.522Z
-title: Getting Material-UI Class Names To Not Change For Snapshot Testing
 templateKey: blog-post
-thumbnail: /img/getting-material-ui-class-names-to-not-change-for-snapshot-testing.png
-description: desc
+title: Getting Material-UI Class Names To Not Change For Snapshot Testing
+description: It's an easy trick but one you'll be hard pressed to find. A
+  colleague of mine is the one who actually found it. You can visit her here.
+  I'm writing it here for my own sanity.
 tags:
   - brewing
   - chemex
+thumbnail: /img/getting-material-ui-class-names-to-not-change-for-snapshot-testing.png
+date: 2020-06-19T19:57:43.522Z
 ---
 
-It's an easy trick but one you'll be hard pressed to find. A colleague of mine is who actually found it. I'm writing it here for my own sanity.
+It's an easy trick but one you'll be hard pressed to find. A colleague of mine is the one who actually found it. You can visit her [here](https://linktr.ee/_natural_e). I'm writing it here for my own sanity.
 
 The trick: (copied from Material-Ui documentation)
 
