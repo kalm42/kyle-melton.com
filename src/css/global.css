@@ -90,3 +90,11 @@ p {
     max-width: 500px;
   }
 }
+
+code {
+  white-space: normal !important;
+}
+
+pre code {
+  white-space: pre !important;
+}
