@@ -11,7 +11,7 @@ workExperience:
 
       - Made architectural decisions
 
-      - "Partnered with the UX designer, and the product owner to refine requirements while collaborating effectively with other developers on [the] team to deliver features on-time and with high-quality" - Manuela Wafo (see recommendations) 
+      - "Partnered with the UX designer, and the product owner to refine requirements while collaborating effectively with other developers on [the] team to deliver features on-time and with high-quality" - Manuela Wafo (see recommendations)
   - company: Southwest Airlines
     jobTitle: React Developer
     startDate: 2019-11-01T07:00:00.000Z
@@ -27,7 +27,8 @@ workExperience:
     jobTitle: Software Developer
     startDate: 2018-07-01T07:00:00.000Z
     endDate: 2019-11-01T07:00:00.000Z
-    jobDescription: Freelance web application development. I work with Progressive
+    jobDescription:
+      Freelance web application development. I work with Progressive
       Web Applications, mostly React, but also NextJs and Gatsby. I have made
       headless WordPress installations with custom WordPress plugins, and
       express servers running REST APIs as well as GraphQL based APIs.
@@ -37,12 +38,28 @@ education:
     graduationDate: 2020-06-19
 certifications:
   - title: Google Mobile Web Developer
-    description: The Mobile Web Developer Certification is a performance-based exam
+    description:
+      The Mobile Web Developer Certification is a performance-based exam
       that challenges mobile web developers to write code in response to
       real-world tasks. Based on extensive job task analyses, candidates earning
       this certification have shown that they have the skills expected of an
       advanced-level mobile web developer, and are capable of writing performant
       and responsive applications for the mobile web.
-projects: []
-skills: []
+projects:
+  - title: Voice Your Stance
+    description: A web application for finding your local representatives so that you could contact them. It has all publicly available contact methods. The best part is that you could write and mail physical letters from the site. There is a library of letters tagged by topic to chose as a starting point if you wished too.
+    tags:
+      - tag: political
+      - tag: gatsby
+      - tag: gql
+      - tag: prisma
+skills:
+  - skill: JavaScript
+  - skill: Typescript
+  - skill: Testing
+  - skill: Jest
+  - skill: Cypress
+  - skill: GQL
+  - skill: Node
+  - skill: React
 ---

@@ -92,7 +92,12 @@ collections:
                   { label: "Company", name: "company", widget: "string" },
                   { label: "Job Title", name: "jobTitle", widget: "string" },
                   { label: "Start Date", name: "startDate", widget: "date" },
-                  { label: "End Date", name: "endDate", widget: "date" },
+                  {
+                    label: "End Date",
+                    name: "endDate",
+                    widget: "date",
+                    required: false,
+                  },
                   {
                     label: "Job Description",
                     name: "jobDescription",
@@ -132,6 +137,7 @@ collections:
               name: "projects",
               widget: "list",
               add_to_top: true,
+              required: false,
               fields:
                 [
                   { label: "Title", name: "title", widget: "string" },
@@ -148,5 +154,6 @@ collections:
               label: "Skills",
               name: "skills",
               widget: "list",
+              required: false,
               field: { label: "Skill", name: "skill", widget: "string" },
             }

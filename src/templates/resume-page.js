@@ -49,7 +49,7 @@ export const ResumePageTemplate = props => {
         </section>
         <section>
           <h2>Projects</h2>
-          {projects.map(({ title, description, tags }, i) => (
+          {projects?.map(({ title, description, tags }, i) => (
             <article kei={i} className={styles["ResumePage__item"]}>
               <h3>{title}</h3>
               {description}
@@ -75,7 +75,7 @@ export const ResumePageTemplate = props => {
         <section>
           <h2>Skills</h2>
           <ul>
-            {skills.map(({ skill }, i) => (
+            {skills?.map(({ skill }, i) => (
               <li key={i}>{skill}</li>
             ))}
           </ul>
