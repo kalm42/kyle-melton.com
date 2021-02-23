@@ -8,6 +8,8 @@
     0 16px 16px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
+  width: calc(80vw);
+  margin: 20px 0;
 }
 
 .gatsby-highlight::before {

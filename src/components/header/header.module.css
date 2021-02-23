@@ -1,14 +1,13 @@
 .header {
   background: var(--grey-5);
-  margin-bottom: 1.45rem;
   display: flex;
+  padding: calc(4vmin);
 }
 
 .header__container {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
-  padding: 1.45rem 1.0875rem;
+  flex: 1;
 }
 
 .header__link {
@@ -42,14 +41,15 @@
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .header__menu {
-  display: grid;
-  flex: 1;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(6vmin);
 }
 .header__menuitem {
   font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
 }

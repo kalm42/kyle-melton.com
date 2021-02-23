@@ -19,8 +19,9 @@
 }
 
 .footer__widgets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(6vmin);
 }
 
 .footer__list {
