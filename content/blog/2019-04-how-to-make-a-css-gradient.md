@@ -1,13 +1,13 @@
 ---
 slug: /how-to-make-a-css-gradient
-title: How to Make a CSS Gradient
 templateKey: blog-post
-date: 2019-04-30T15:04:10.000Z
-thumbnail: /img/how-to-make-a-css-gradient.png
-description: desc
+title: How to Make a CSS Gradient
+description: Various ways to make CSS gradients. Copy/Paste ready.
 tags:
   - brewing
   - chemex
+thumbnail: /img/how-to-make-a-css-gradient.png
+date: 2019-04-30T15:04:10.000Z
 ---
 
 # How to Make a CSS Gradient
