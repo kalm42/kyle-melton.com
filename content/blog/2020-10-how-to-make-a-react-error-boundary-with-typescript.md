@@ -1,13 +1,13 @@
 ---
 slug: /react-error-boundary-with-typescript
-date: 2020-10-15T21:51:35.742Z
-title: How to make a React Error Boundary with Typescript
 templateKey: blog-post
-thumbnail: /img/how-to-make-a-react-error-boundary-with-typescript.png
-description: descr
+title: How to make a React Error Boundary with Typescript
+description: I found this over here and I'm shamelessly copying it here for quick reference.
 tags:
   - brewing
   - chemex
+thumbnail: /img/how-to-make-a-react-error-boundary-with-typescript.png
+date: 2020-10-15T21:51:35.742Z
 ---
 
 I found this over [here](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/error_boundaries/) and I'm shamelessly copying it here for quick reference.
