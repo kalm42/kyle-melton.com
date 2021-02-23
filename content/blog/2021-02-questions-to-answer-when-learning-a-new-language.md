@@ -318,14 +318,16 @@ variable.method() // 'Bye'
 ```javascript
 const parentVariable = {
   name: 'Kyle',
-  prop: {
-    name: 'Tyler',
-    method: () => {
-      return `Hi ${this.name}`
+  prop: function (){
+    return {
+      name: 'Tyler',
+      method: () => {
+        return `Hi ${this.name}`
+      }
     }
   }
 }
-parentVariable.prop.method() // 'Hi Kyle', because this is inherited
+parentVariable.prop().method() // 'Hi Kyle', because this is inherited
 ```
 
 90. What is assignment by value?
