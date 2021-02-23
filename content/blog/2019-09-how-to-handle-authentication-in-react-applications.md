@@ -1,13 +1,15 @@
 ---
 slug: /how-to-handle-authentication-in-react-applications
-date: 2019-09-22T19:57:43.522Z
-title: How to Handle Authentication in React Applications
 templateKey: blog-post
-thumbnail: /img/how-to-handle-authentication-in-react-applications.png
-description: desc
+title: How to Handle Authentication in React Applications
+description: The concept for this I have straight up stolen from Kent C. Dodds'
+  blog post on the same concept. Go here and read his post. Maybe attend a
+  workshop he puts on, I would bet money it would be worth the cost.
 tags:
   - brewing
   - chemex
+thumbnail: /img/how-to-handle-authentication-in-react-applications.png
+date: 2019-09-22T19:57:43.522Z
 ---
 
 # How to Handle Authentication in React Applications
