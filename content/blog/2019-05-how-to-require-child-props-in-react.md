@@ -1,13 +1,14 @@
 ---
-slug: "/how-to-require-child-props-in-react"
-title: "How to Require Child Props in React"
+slug: /how-to-require-child-props-in-react
 templateKey: blog-post
-date: 2019-05-06T15:04:10.000Z
-thumbnail: /img/how-to-require-child-props-in-react.png
-description: desc
+title: How to Require Child Props in React
+description: You have a component and the child of that component needs to be
+  one or more HTML elements. How do you properly set the prop types for this?
 tags:
   - brewing
   - chemex
+thumbnail: /img/how-to-require-child-props-in-react.png
+date: 2019-05-06T15:04:10.000Z
 ---
 
 # How to Require Child Props in React
