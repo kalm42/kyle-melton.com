@@ -1,13 +1,18 @@
 ---
-slug: "/why-not-to-use-wordpress"
-title: "Why Not To Use WordPress"
+slug: /why-not-to-use-wordpress
 templateKey: blog-post
-date: 2019-04-09T15:04:10.000Z
-thumbnail: /img/why-not-to-use-wordpress.png
-description: desc
+title: Why Not To Use WordPress
+description: There are plenty of reasons people give to use WordPress, and by
+  all means my opinion is just that. Also as with everything computer related
+  "it depends". If you're stupid good with PHP then yeah you can get WordPress
+  to do just about anything you want it to. This post isn't for you. This post
+  is for everyone else. For those that don't know why many dislike WordPress
+  (myself included).
 tags:
   - brewing
   - chemex
+thumbnail: /img/why-not-to-use-wordpress.png
+date: 2019-04-09T15:04:10.000Z
 ---
 
 # Why Not To Use WordPress
