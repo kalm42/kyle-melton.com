@@ -11,127 +11,203 @@ tags:
 thumbnail: /img/questions-to-answer-when-learning-a-new-language.png
 date: 2021-02-19T22:53:23.054Z
 ---
+
 So, I've been teaching a friend JavaScript. During that I've been quizzing him and it struck me that many of these questions are rather broad and could be applied to multiple languages. Having learned JavaScript, Swift, and PHP to, what I would consider, a proficient level I think I'm capable of making that determination.
 
 I played around a little with Rust but I have been planing on getting a lot better with it so that I could do some more Object Oriented programming. so here is the list of questions for JavaScript and I'll return to extend this to have the answers for other languages where applicable. I'll note JS specific questions and as I find other language specific questions I'll add those with a note.
 
 I hope you find this useful. Give me a shout on twitter if you do. @kalm42
 
-1. What are the primitive types?
+## What are the primitive types?
 
-   * string
-   * boolean
-   * number
-   * null
-   * undefined
-   * object
-   * symbol
-2. What is a string?
+- string
+- boolean
+- number
+- null
+- undefined
+- object
+- symbol
 
-   // I know this might seem stupid, but it's best to say the obvious to avoid overlooking potential knowledge gaps.
-3. What is a boolean?
-4. What is a number?
+## What is a string?
 
-   // This might be better for the other languages where there's a difference between signed and unsigned, 32 bit or 64 bit, floats or ints, but still important to state the obvious.
-5. What is null?
-6. What is undefined?
-7. What is an object?
-8. What is a symbol?
-9. How do you define a string?
+// I know this might seem stupid, but it's best to say the obvious to avoid overlooking potential knowledge gaps.
 
-   * '', or "", or 
-10. How do you escape a character?
+## What is a boolean?
 
-    *  `\`
-11. How do you concatenate two strings?
-12. How do you do string interpolation?
-13. How do you define an object?
-14. How do you make a code block?
-15. How do you write an if statement?
-16. Can var or let be mutated? 
+## What is a number?
 
-    * // Maybe change this to be basic variable mutation vs constants
-17. When do you declare a variable? 
+// This might be better for the other languages where there's a difference between signed and unsigned, 32 bit or 64 bit, floats or ints, but still important to state the obvious.
 
-    * // So because of JS hoisting this is a valid question to ask with JavaScript I wonder if it's valid to ask if there are considerations in other languages as to when it is best to define/declare variables.
-18. When do you use var? 
+## What is null?
 
-    * // JS specific, idk if that's at all relevant to other languages.
-19. What is the variable naming convention?
-20. What is the function naming convention?
-21. What is the class naming convention?
-22. What are invalid names?
-23. What is the modulo operator?
-24. Can you do math with strings?
+## What is undefined?
 
-    * Yes, but no. // insert that gif
-25. Why make an object? 
+## What is an object?
 
-    * // maybe extend that to similar things in other languages like the hash map etc.
-26. Can you sort object keys?
-27. How can you access object properties?
-28. What are the various equality operator's syntax.
+## What is a symbol?
 
-    * `<` Less than
-      b. `>` greater than
-      c. `<=` Less than or equal to
-      d. `>=` Greater than or equal to
-      e. `==` equal to with type coercion
-      f. `!=` not equal to, with type coercion
-      g. `===` equal to without type coercion
-      h. `!==` not equal to, without type coercion
-      i. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
-29. What is type coercion?
-30. Why make a function?
-31. How do you define a function?
-    a. `function functionName() {}` standard, `function() {}` anonymous, `const functionName = function() {}` anonymous in a variable, `const functionName = function functionName() {}` named in a variable, `const functionName = () => {}` arrow
-32. How do you call a function?
-33. How do you pass information into a function?
-34. What is a parameter?
-    // Not in the Jeopardy sense, but in a vocab sense.
-35. What is an argument?
-    // again for vocab
-36. What is the difference between a parameter and an argument?
-    a. A parameter is the variable in the function context. An argument is the variable passed to the called function. Argument at calling, parameter in the function.
-37. How do you get information out of a function?
-38. What is the Unix epoch?
-39. How does JS track time?
-    a. Milliseconds
-40. What's the best resource for built in JS functions.
-    a. MDN
-41. What is function scope?
-42. Are arguments passed by value or by reference?
-43. What does "passed by reference" mean?
-44. How do you set a default value for a parameter?
-45. What is hoisting?
-46. Are arrow function anonymous?
-47. What is an implicit return?
-48. What is an immediately invoked function expression?
-49. What is a method?
-50. What is a callback function?
-51. What is scope?
-52. What is a global variable?
-53. Should you make global variables?
-54. Can a function access a variable in the parent scope?
-55. What is block scope?
-56. When a function looks outside it's scope does it look where it is called or where it is defined?
-57. What is a closure?
-    a. A function that returns another function. The returned function must access a variable defined in the parent function's scope.
-58. What are the order of operations?
-    a. Parentheses, exponents, multiplication, division, addition, and subtraction. The same as in mathematics.
-59. What is the operator for each of those?
-    a. `()` parentheses
-    b. `**` exponents
-    c. `*` multiplication
-    d. `/` division
-    e. `+` addition
-    f. `-` subtraction
-    g. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
-60. What is an if statement?
-    a. Conditionally executes a block of code.
-61. What is an else statement?
-    a. Must be paired with an if statement, it is the alternate block of code to execute if the condition is false.
-62. Show the syntax for `if`, `if/else`, and `if/elseif/else`
+## How do you define a string?
+
+- '', or "", or
+
+## How do you escape a character?
+
+- `\`
+
+## How do you concatenate two strings?
+
+## How do you do string interpolation?
+
+## How do you define an object?
+
+## How do you make a code block?
+
+## How do you write an if statement?
+
+## Can var or let be mutated?
+
+- // Maybe change this to be basic variable mutation vs constants
+
+## When do you declare a variable?
+
+- // So because of JS hoisting this is a valid question to ask with JavaScript I wonder if it's valid to ask if there are considerations in other languages as to when it is best to define/declare variables.
+
+## When do you use var?
+
+- // JS specific, idk if that's at all relevant to other languages.
+
+## What is the variable naming convention?
+
+## What is the function naming convention?
+
+## What is the class naming convention?
+
+## What are invalid names?
+
+## What is the modulo operator?
+
+## Can you do math with strings?
+
+- Yes, but no. // insert that gif
+
+## Why make an object?
+
+- // maybe extend that to similar things in other languages like the hash map etc.
+
+## Can you sort object keys?
+
+## How can you access object properties?
+
+## What are the various equality operator's syntax.
+
+- `<` Less than
+- `>` greater than
+- `<=` Less than or equal to
+- `>=` Greater than or equal to
+- `==` equal to with type coercion
+- `!=` not equal to, with type coercion
+- `===` equal to without type coercion
+- `!==` not equal to, without type coercion
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+
+## What is type coercion?
+
+## Why make a function?
+
+## How do you define a function?
+
+```javascript
+function functionName() {} // standard
+function() {} // anonymous
+const functionName = function functionName() {} // named variable
+const functionName = function() {} // anonymous variable
+const functionName = () => {} // arrow
+```
+
+## How do you call a function?
+
+## How do you pass information into a function?
+
+## What is a parameter?
+
+## What is an argument?
+
+## What is the difference between a parameter and an argument?
+
+A parameter is the variable in the function context. An argument is the variable passed to the called function. Argument at calling, parameter in the function.
+
+## How do you get information out of a function?
+
+## What is the Unix epoch?
+
+## How does JS track time?
+
+Milliseconds
+
+## What's the best resource for built in JS functions.
+
+MDN
+
+## What is function scope?
+
+## Are arguments passed by value or by reference?
+
+## What does "passed by reference" mean?
+
+## How do you set a default value for a parameter?
+
+## What is hoisting?
+
+## Are arrow function anonymous?
+
+## What is an implicit return?
+
+## What is an immediately invoked function expression?
+
+## What is a method?
+
+## What is a callback function?
+
+## What is scope?
+
+## What is a global variable?
+
+## Should you make global variables?
+
+## Can a function access a variable in the parent scope?
+
+## What is block scope?
+
+## When a function looks outside it's scope does it look where it is called or where it is defined?
+
+## What is a closure?
+
+A function that returns another function. The returned function must access a variable defined in the parent function's scope.
+
+## What are the order of operations?
+
+Parentheses, exponents, multiplication, division, addition, and subtraction. The same as in mathematics.
+
+## What is the operator for each of those?
+
+`()` parentheses
+
+`**` exponents
+c. `*` multiplication
+d. `/` division
+e. `+` addition
+f. `-` subtraction
+g. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+
+## What is an if statement?
+
+Conditionally executes a block of code.
+
+## What is an else statement?
+
+Must be paired with an if statement, it is the alternate block of code to execute if the condition is false.
+
+## Show the syntax for `if`, `if/else`, and `if/elseif/else`
 
 ```javascript
 if(condition){
@@ -151,186 +227,521 @@ if(condition) {
 }
 ```
 
-65. What is the logical and?
+## What is the logical and?
 
-* Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
-  b. Pro-tip! The logical and will not evaluate the right hand side if the left hand side evaluates to false.
+- Like mathematics, the logical and will return true if both the left hand side of the operator and the right hand side of the operator evaluate to true. If either side evaluates to false then the logical and will return false.
 
-66. What is the logical or?
-    a. Also like mathematics, the logical or will return true if either the left hand side or the right hand side of the operator evaluates to true. If both evaluate to false then the logical or will return false.
-67. What is truthy?
-    a. Truthy is a short hand description for all things that can be coerced to true.
-    b. Here are all truthy values:
-      I. All defined variables except an empty string `''`, 0, null, and NaN.
-68. What is falsey?
-    a. Falsey is a short hand description for all values that can be coerced to false.
-    b. Here are all falsy values:
-      I. All undefined variables, 0, null, NaN, and an empty string.
-69. What expressions can be used for the conditional in an if statement?
-    a. Anything that evaluates to a truthy or falsey value.
-70. What is coercion?
-    a. Changing the primitive type from one to another.
-71. What is a ternary?
-    a. Short hand if else. *This must be used as an expression and not a statement. In other words it must be returning a value either from the key word `return`, or into a variable through assignment `=`, or interpolation, or as a conditional.
-72. What is the `&&` short cut?
-    a. The logical and will return the right hand side if the left is truthy. 
+  Pro-tip! The logical and will not evaluate the right hand side if the left hand side evaluates to false.
+
+## What is the logical or?
+
+Also like mathematics, the logical or will return true if either the left hand side or the right hand side of the operator evaluates to true. If both evaluate to false then the logical or will return false.
+
+## What is truthy?
+
+Truthy is a short hand description for all things that can be coerced to true.
+
+### Here are all truthy values:
+
+All defined variables except an empty string `''`, 0, null, and NaN.
+
+## What is falsey?
+
+Falsey is a short hand description for all values that can be coerced to false.
+
+### Here are all falsy values:
+
+All undefined variables, 0, null, NaN, and an empty string.
+
+## What expressions can be used for the conditional in an if statement?
+
+Anything that evaluates to a truthy or falsey value.
+
+## What is coercion?
+
+Changing the primitive type from one to another.
+
+## What is a ternary?
+
+Short hand if else. \*This must be used as an expression and not a statement. In other words it must be returning a value either from the key word `return`, or into a variable through assignment `=`, or interpolation, or as a conditional.
+
+## What is the `&&` short cut?
+
+The logical and will return the right hand side if the left is truthy.
 
 ```javascript
-true && someFunction(); // some function will run.
-const variableName = true && someGetter(); 
+true && someFunction() // some function will run.
+const variableName = true && someGetter()
 // the return value of someGetter will be assigned to variableName.
 ```
 
-73. What is a switch statement?
-    a. I only know how to describe when you would want to use it. If you have a lot (read 3 or more) `if` & `else if` blocks and/or one or more of those conditions would require the same code to be executed AND the conditionals can be evaluated with `===` then you should use a switch statement.
-74. What is the syntax for a switch statement?
+## What is a switch statement?
+
+I only know how to describe when you would want to use it. If you have a lot (read 3 or more) `if` & `else if` blocks and/or one or more of those conditions would require the same code to be executed AND the conditionals can be evaluated with `===` then you should use a switch statement.
+
+## What is the syntax for a switch statement?
 
 ```javascript
-switch(variableToCheck) {
+switch (variableToCheck) {
   case possibleValue:
-    doSomething();
-    break; // If you don't break the next lines WILL be run.
+    doSomething()
+    break // If you don't break the next lines WILL be run.
   case anotherPossibleValue:
   case yetAnotherPossibleValue:
-    doAnotherThing(); // both of the above cases will run this code
-    break;
+    doAnotherThing() // both of the above cases will run this code
+    break
   default:
-    doDefaultThing(); // if none of the cases match this is run
+    doDefaultThing() // if none of the cases match this is run
 }
 ```
 
-75. How do you delay code execution for a set amount of time?
-    a. With the build in function `setTimeout` 
-76. How do you repeatedly execute a block of code on an interval?
-    a. With the built in function `setInterval` 
-77. What is the syntax for setTimeout?
-    a. There's a lot more than the snippet below so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+## How do you delay code execution for a set amount of time?
+
+With the build in function `setTimeout`
+
+## How do you repeatedly execute a block of code on an interval?
+
+With the built in function `setInterval`
+
+## What is the syntax for setTimeout?
+
+There's a lot more than the snippet below so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
 
 ```javascript
-setTimeout(function () {}, delayTimeInMiliseconds);
+setTimeout(function () {}, delayTimeInMiliseconds)
 ```
 
-78. What is the syntax for setInterval?
-    a. There's more than the snippet below shows so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+## What is the syntax for setInterval?
+
+There's more than the snippet below shows so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 ```javascript
-setInterval(function () {}, delayTimeInMiliseconds);
+setInterval(function () {}, delayTimeInMiliseconds)
 ```
 
-79. Can you control the order of properties in an object?
-    a. No.
-80. What kind of values can be stored in an object? *The value of a key, value pair.
-    a. Anything.
-81. What kind of values can be used as a propperty in an object. *The key in a key value pair.
-    a. String, number, or any JS valid naming convention.
-82. How do you prevent object mutation?
-    a. `Object.freeze(objectVariable);`
-83. How can you access properties in an object?
+## Can you control the order of properties in an object?
+
+No.
+
+## What kind of values can be stored in an object? \*The value of a key, value pair.
+
+Anything.
+
+## What kind of values can be used as a propperty in an object. \*The key in a key value pair.
+
+String, number, or any JS valid naming convention.
+
+## How do you prevent object mutation?
+
+```javascript
+const objectVariable = {
+  has: "values",
+}
+Object.freeze(objectVariable)
+```
+
+## How can you access properties in an object?
 
 ```javascript
 const variable = {
   prop: true,
 }
-variable.prop;
-variable['prop'];
-const p = 'prop';
-variable[p];
+variable.prop
+variable["prop"]
+const p = "prop"
+variable[p]
 function get() {
-  return 'prop';
+  return "prop"
 }
-variable[get()];
+variable[get()]
 ```
 
-84. How do you access a deeply nested property?
-    a. The same way just repeadetly and possibly interchangeably.
+## How do you access a deeply nested property?
+
+The same way just repeadetly and possibly interchangeably.
 
 ```javascript
 const variable = {
   prop: {
     anotherProp: {
-      'a-third-prop': true
-    }
+      "a-third-prop": true,
+    },
   },
 }
-variable.prop.anotherProp['a-third-prop'];
-variable['prop']['anotherProp']['a-third-prop'];
-const p = 'prop';
-variable[p].anotherProp['a-third-prop'];
+variable.prop.anotherProp["a-third-prop"]
+variable["prop"]["anotherProp"]["a-third-prop"]
+const p = "prop"
+variable[p].anotherProp["a-third-prop"]
 function get() {
-  return 'prop';
+  return "prop"
 }
 function what() {
-  return 'third'
+  return "third"
 }
-variable[get()].anotherProp[`a-${what()}-prop`];
+variable[get()].anotherProp[`a-${what()}-prop`]
 ```
 
-85. How do you remove a property from an object?
-    a. With the `delete` keyword.
+## How do you remove a property from an object?
+
+With the `delete` keyword.
 
 ```javascript
 const variable = {
-  prop: 'something'
+  prop: "something",
 }
 delete variable.prop
 ```
 
-86. How do you add a property to an object?
-    a. You assign it a value.
+## How do you add a property to an object?
+
+You assign it a value.
 
 ```javascript
 const variable = {}
 
-variable.prop = null;
-variable['another prop'] = null;
+variable.prop = null
+variable["another prop"] = null
 // so on an so forth
 ```
 
-87. What is a method?
-    a. In JS it's a function in an object. In all other languages it's a function in a class.
+## What is a method?
+
+In JS it's a function in an object. In all other languages it's a function in a class.
 
 ```javascript
 const variable = {
   method: function () {
     return `I'm a method.`
-  }
+  },
 }
 ```
 
-88. What is this?
-    a. `this` is a reference to the context a method is called in. There are many, many caveats. In the snippet below `this` refers to the instance of the variable calling the method.
+## What is this?
+
+`this` is a reference to the context a method is called in. There are many, many caveats. In the snippet below `this` refers to the instance of the variable calling the method.
 
 ```javascript
 const variable = {
   prop: true,
   method: function () {
-    return this.prop ? 'Hi' : 'Bye'
-  }
+    return this.prop ? "Hi" : "Bye"
+  },
 }
 variable.method() // 'Hi'
-variable.prop = false;
+variable.prop = false
 variable.method() // 'Bye'
 ```
 
-89. Do arrow function scope this?
-    a. No. In the snippet below because an arrow function does not scope `this` the `this` is inherited from the parent.
+## Do arrow function scope this?
+
+No. In the snippet below because an arrow function does not scope `this` the `this` is inherited from the parent.
 
 ```javascript
 const parentVariable = {
-  name: 'Kyle',
-  prop: function (){
+  name: "Kyle",
+  prop: function () {
     return {
-      name: 'Tyler',
+      name: "Tyler",
       method: () => {
         return `Hi ${this.name}`
-      }
+      },
     }
-  }
+  },
 }
 parentVariable.prop().method() // 'Hi Kyle', because this is inherited
 ```
 
-90. What is assignment by value?
-    a. When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunk of memory is populated with whatever the value is.
-91. What is assignment by reference?
-    a. When assigning a variable a value by reference the variable does not get a chunk of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunk of memory affect all variables referencing that chunk of memory.
+## What is assignment by value?
+
+When assigning a variable a value by value a chunk of memory gets assigned to the variable and that chunk of memory is populated with whatever the value is. 91. What is assignment by reference?
+
+When assigning a variable a value by reference the variable does not get a chunk of memory allocated for it. Instead it gets a reference to an existing chunk of memory. Modifications to that chunk of memory affect all variables referencing that chunk of memory.
+
+## How are objects compared with the `===` opperator?
+
+They are compared by referrence not by value. If you need to compare two basic objects the easiest way is this.
+
+```javascript
+const doesMatch = JSON.stringify(object1) === JSON.stringify(object2)
+```
+
+This transforms the the objects into strings making it quick and easy to compare the two strings if there are any key or value differences it will return false. The catch is that the object must be string-able. Objects with circular references will not work with this strategy.
+
+## How do you copy an object by reference?
+
+Using the assignment operator.
+
+```javascript
+const newObject = oldObject
+```
+
+## How do you copy an= object by reference?
+
+There are a couple strategies for this one. They get a little weird.
+
+The first way is the old school [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
+
+```javascript
+const someObject = {
+  has: "properties",
+  and: { also: { has: { deeply: { nested: { values: 1 } } } } },
+}
+const otherObject = Object.assign({}, someObject)
+```
+
+This will copy all enumerable own properties from the second argument onto the first arguement. We make the first arguemnt an empty object to get a straight copy.
+
+The second way is with the spread operator.
+
+```javascript
+const someObject = {
+  has: "properties",
+  and: { also: { has: { deeply: { nested: { values: 1 } } } } },
+}
+const otherObject = { ...someObject }
+```
+
+There's a downside to this approach. Only the first level of properties are copied over by value everything after that is copied by reference. So... watch out.
+
+The third way is kinda silly but works. Stringify and then parse the source object to the target object.
+
+```javascript
+const someObject = {
+  has: "properties",
+  and: { also: { has: { deeply: { nested: { values: 1 } } } } },
+}
+const otherObject = JSON.parse(JSON.stringify(someObject))
+```
+
+This will copy everything stringable from one to the other.
+
+## How are objects passed to functions?
+
+By reference. This is why it's important to never re-assign or mutate a parameter.
+
+## What is a Map?
+
+A Map object holds key value pairs _in order_ stored where keys and values can be any primitive including objects.
+
+## What is JSON?
+
+*J*ava*S*cript *O*bject *N*otation
+
+It is the string representation of a basic JavaScript object. To make JSON we use:
+
+```javascript
+const someObject = {
+  has: "values",
+}
+const string = JSON.stringify(someObject) // '{"has":"values"}'
+```
+
+## What is an array?
+
+An array is an ordered collection of values.
+
+## How do you access an item in an array?
+
+With the index of the item.
+
+```javascript
+const arr = ["💩", "🚰", "😩"]
+arr[1] // 🚰
+```
+
+## What is the index?
+
+It is the position of an item in an array.
+
+## What is the index of the first item in an array?
+
+0. Arrays start at 0.
+
+## How do you get the length of an array?
+
+With the length property.
+
+```javascript
+const arr = ["💩", "🚰", "😩"]
+arr.length // 3
+```
+
+## What can you put in an array?
+
+Anything. Okay, maybe not your mom.
+
+## How do you make an array.
+
+Like this.
+
+```javascript
+// literal
+const fruits = ["🍎", "🍌"]
+const animals = new Array("🐵", "🐶")
+```
+
+## Does an array have keys?
+
+No.
+
+## What primitive type is an array?
+
+Object.
+
+## Where can you go to find the syntax for all the prototypal functions arrays have?
+
+[MDN.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+## Are some prototypal functions destructive? / Do they mutate the variable they're called on?
+
+Yes. Check MDN to see if the method is destructive or not.
+
+## How do you use a destructive method without mutating the original variable?
+
+You first copy the original variable.
+
+```javascript
+const fruits = ["🍎", "🍌"]
+const newFruits = [...fruits].reverse() // ["🍌", "🍎"]
+```
+
+## How do you add an item to an array?
+
+With the `push` method.
+
+```javascript
+const fruits = ["🍎", "🍌"]
+fruits.push("🥭")
+console.log(fruits) // ["🍎", "🍌", "🥭"]
+```
+
+## Is push destructive?
+
+Yes.
+
+## How do you add an item to the beginning of an array?
+
+With the `unshift` method. Why unshift? Because `shift` removes the first element.
+
+```javascript
+const fruits = ["🍎", "🍌"]
+fruits.unshift("🥭")
+console.log(fruits) // ["🥭", "🍎", "🍌"]
+```
+
+## What does slice do?
+
+Copy a portion of an array.
+
+## What does splice do?
+
+Removes, replaces, or inserts a portion of an array. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
+
+## How do you add an item in the middle?
+
+With splice or with stragetic copying.
+
+```javascript
+const fruits = ["🍎", "🍌"]
+fruits.splice(1, 0, "🥭")
+console.log(fruits) // ["🍎", "🥭", "🍌"]
+// OR
+const fruits = ["🍎", "🍌"]
+const newFruits = [...fruits.slice(0, 1), "🥭", ...fruits.slice(1)]
+```
+
+The first one is destructive, the original variable is mutated. The second is non-destructive.
+
+## How do you remove an item in the middle?
+
+With splice or with stragetic copying.
+
+```javascript
+const fruits = ["🍎", "🥭", "🍌"]
+fruits.splice(1, 1)
+console.log(fruits) // ["🍎", "🍌"]
+// OR
+const fruits = ["🍎", "🥭", "🍌"]
+const newFruits = [...fruits.slice(0, 1), ...fruits.slice(2)]
+```
+
+The first one is destructive because the variable is mutated. The second is non-destructive because the variable is not mutated.
+
+## How do you destructure an array?
+
+Like this:
+
+```javascript
+const fruits = ["🍎", "🥭", "🍌"]
+const [apple, mango, ...other] = fruits
+console.log(apple) // "🍎"
+console.log(mango) // "🥭"
+console.log(banana) // ["🍌"]
+```
+
+The last one isn't required just an example of how to collect n number entries.
+
+## How do you destructure an object?
+
+Like this:
+
+```javascript
+const fruits = {
+  apple: "🍎",
+  mango: "🥭",
+  banana: "🍌",
+  peach: "🍑",
+}
+const { apple, mango, ...other } = fruits
+console.log(apple) // "🍎"
+console.log(mango) // "🥭"
+console.log(other) // { banana: "🍌", peach: "🍑" }
+```
+
+The last one isn't required just an example of how to collect n number entries.
+
+<a name=""></a>
+
+## How do you find the index of an item in an array?
+
+like this:
+
+```javascript
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆", "🌮", "🌮"]
+const isTacoFruit = fruits.includes("🌮") // true, tacos are life
+const tacoIndex = fruits.indexOf("🌮") // 5
+const lastTaco = fruits.lastIndexOf("🌮") // 6
+const tacoIndexHunt = fruits.findIndex(fruit => fruit === "🌮") // 5
+const tacoHunt = fruits.find(fruit => fruit === "🌮") // "🌮"
+```
+
+Okay, yes some don't return an index but instead return the entry but these are basically every array search method apart from filter, map, every, forEach, reduce, reduceRight, and sort.
+
+## How do you reverse the order of an array?
+
+There are two ways. One destructive and one non-destructive. Okay, that's a lie, there's only one and it's destructive but you can do an extra step to save the og variable.
+
+```javascript
+// destructive
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
+fruits.reverse() // ["🍆", "🍑", "🍌", "🥭", "🍎"]
+
+// non-destructive
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
+const newFruits = [...fruits].reverse() // ["🍆", "🍑", "🍌", "🥭", "🍎"]
+```
+
+## How do you write a function generator?
+
+It's a function that returns a function.
+
+```javascript
+function findByFood(food) {
+  return function (foods) {
+    return foods.food.includes(food)
+  }
+}
+const food = [{ food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }, { food: ["🍔", "🍿"] }]
+const findApple = findByFood("🍎")
+const apple = food.find(findApple) // { food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }
+```
