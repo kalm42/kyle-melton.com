@@ -745,3 +745,49 @@ const food = [{ food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }, { food: ["🍔
 const findApple = findByFood("🍎")
 const apple = food.find(findApple) // { food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }
 ```
+
+## How do you loop through all the items in an array?
+
+Oh the options, so many ways. I should probably made this more specific. Oh well, arrays does make it a little more specific.
+
+So with arrays we have *drum roll*:
+
+- map
+- forEach
+- standard for loop
+
+```javascript
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
+
+// map - returns a new array, takes callback function as an argument
+const allTurtles = fruits.map((fruit) => {
+  return fruit + "🐢";
+});
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+
+// forEach - returns void, takes a callback function as an argument
+const allTurtles = []
+fruits.forEach((fruit) => {
+  allTurtles.push(`${fruit}🐢`);
+});
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+
+// standard for loop
+const allTurtles = []
+for(let i = 0; i < fruits.length; i++) {
+  const fruit = fruits[i];
+  allTurtles.push(`${fruit}🐢`);
+}
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+```
+
+## How do you loop through all the items in an object?
+
+First thing you need to do is not work with an object. Generally speaking objects are not iterable. That is you can not iterate over the key:value pairs like you can iterterate over the index:value pairs of an array. So the first they we need to do is get an interable we can work with.
+
+Here are our options.
+
+- Object.keys
+- Object.values
+- for...in
+- for...of
