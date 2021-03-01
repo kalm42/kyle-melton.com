@@ -750,35 +750,41 @@ const apple = food.find(findApple) // { food: ["🍎", "🥭", "🍌", "🍑", "
 
 Oh the options, so many ways. I should probably made this more specific. Oh well, arrays does make it a little more specific.
 
-So with arrays we have *drum roll*:
+So with arrays we have _drum roll_:
 
 - map
 - forEach
 - standard for loop
+- [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```javascript
 const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
 
 // map - returns a new array, takes callback function as an argument
-const allTurtles = fruits.map((fruit) => {
-  return fruit + "🐢";
-});
-console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+const allTurtles = fruits.map(fruit => {
+  return fruit + "🐢"
+})
+console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
 
 // forEach - returns void, takes a callback function as an argument
 const allTurtles = []
-fruits.forEach((fruit) => {
-  allTurtles.push(`${fruit}🐢`);
-});
-console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+fruits.forEach(fruit => {
+  allTurtles.push(`${fruit}🐢`)
+})
+console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
 
 // standard for loop
 const allTurtles = []
-for(let i = 0; i < fruits.length; i++) {
-  const fruit = fruits[i];
-  allTurtles.push(`${fruit}🐢`);
+for (let i = 0; i < fruits.length; i++) {
+  const fruit = fruits[i]
+  allTurtles.push(`${fruit}🐢`)
 }
-console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+
+// for...of
+for (const fruit of fruits) {
+  console.log(fruit) // "🍎"
+}
 ```
 
 ## How do you loop through all the items in an object?
@@ -787,7 +793,43 @@ First thing you need to do is not work with an object. Generally speaking object
 
 Here are our options.
 
-- Object.keys
-- Object.values
-- for...in
-- for...of
+- [Object.entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+- [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values)
+- [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+```javascript
+const fruits = {
+  apple: "🍎",
+  mango: "🥭",
+  banana: "🍌",
+  peach: "🍑",
+  eggplant: "🍆",
+}
+// Object.entries
+const otherFruits = Object.entries(fruits)
+// [["apple", "🍎"], ["mango", "🥭"], ["banana", "🍌"] ...]
+// We can shorten this with array destructuring
+for (const [key, value] of Object.entries(fruits)) {
+  console.log(key) // "apple"
+  console.log(value) // "🍎"
+}
+
+// Object.keys
+const keys = Object.keys(fruits) // ["apple", "mango", ...]
+keys.map(key => {
+  const fruit = fruits[key]
+  console.log(key) // "apple"
+  console.log(fruit) // "🍎"
+})
+
+// Object.values
+const keys = Object.values(fruits) // ["🍎", "🥭", "🍌", "🍑", "🍆"]
+
+// for..in
+for (const property in fruits) {
+  console.log(property) // "apple"
+  const fruit = fruits[property]
+  console.log(fruit) // "🍎"
+}
+```
