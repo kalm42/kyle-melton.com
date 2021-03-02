@@ -15,7 +15,13 @@ const LatestBlogs = props => {
             node: {
               id,
               fields: { slug },
-              frontmatter: { description, title, thumbnail, date },
+              frontmatter: {
+                description,
+                title,
+                thumbnail,
+                date,
+                thumbnailAlt,
+              },
             },
           } = post
           return (
@@ -23,6 +29,7 @@ const LatestBlogs = props => {
               date={date}
               description={description}
               thumbnail={thumbnail}
+              thumbnailAlt={thumbnailAlt}
               key={id}
               slug={slug}
               title={title}
@@ -56,6 +63,7 @@ export default () => {
                   date
                   title
                   description
+                  thumbnailAlt
                   thumbnail {
                     childImageSharp {
                       fluid(maxWidth: 1600) {

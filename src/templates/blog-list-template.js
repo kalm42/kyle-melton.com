@@ -20,6 +20,7 @@ const BlogListTemplate = props => {
             description={posts[0].node.frontmatter.description}
             slug={posts[0].node.fields.slug}
             thumbnail={posts[0].node.frontmatter.thumbnail}
+            thumbnailAlt={posts[0].node.frontmatter.thumbnailAlt}
             title={posts[0].node.frontmatter.title}
             large
           />
@@ -31,6 +32,7 @@ const BlogListTemplate = props => {
               description={posts[1].node.frontmatter.description}
               slug={posts[1].node.fields.slug}
               thumbnail={posts[1].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[1].node.frontmatter.thumbnailAlt}
               title={posts[1].node.frontmatter.title}
               half
             />
@@ -39,6 +41,7 @@ const BlogListTemplate = props => {
               description={posts[2].node.frontmatter.description}
               slug={posts[2].node.fields.slug}
               thumbnail={posts[2].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[2].node.frontmatter.thumbnailAlt}
               title={posts[2].node.frontmatter.title}
               half
             />
@@ -50,6 +53,7 @@ const BlogListTemplate = props => {
               description={posts[1].node.frontmatter.description}
               slug={posts[1].node.fields.slug}
               thumbnail={posts[1].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[1].node.frontmatter.thumbnailAlt}
               title={posts[1].node.frontmatter.title}
               large
             />
@@ -61,6 +65,7 @@ const BlogListTemplate = props => {
             description={posts[3].node.frontmatter.description}
             slug={posts[3].node.fields.slug}
             thumbnail={posts[3].node.frontmatter.thumbnail}
+            thumbnailAlt={posts[3].node.frontmatter.thumbnailAlt}
             title={posts[3].node.frontmatter.title}
             large
           />
@@ -72,6 +77,7 @@ const BlogListTemplate = props => {
               description={posts[4].node.frontmatter.description}
               slug={posts[4].node.fields.slug}
               thumbnail={posts[4].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[4].node.frontmatter.thumbnailAlt}
               title={posts[4].node.frontmatter.title}
             />
             <ArticleBlock
@@ -79,6 +85,7 @@ const BlogListTemplate = props => {
               description={posts[5].node.frontmatter.description}
               slug={posts[5].node.fields.slug}
               thumbnail={posts[5].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[5].node.frontmatter.thumbnailAlt}
               title={posts[5].node.frontmatter.title}
             />
             <ArticleBlock
@@ -86,6 +93,7 @@ const BlogListTemplate = props => {
               description={posts[6].node.frontmatter.description}
               slug={posts[6].node.fields.slug}
               thumbnail={posts[6].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[6].node.frontmatter.thumbnailAlt}
               title={posts[6].node.frontmatter.title}
             />
           </>
@@ -96,6 +104,7 @@ const BlogListTemplate = props => {
               description={posts[4].node.frontmatter.description}
               slug={posts[4].node.fields.slug}
               thumbnail={posts[4].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[4].node.frontmatter.thumbnailAlt}
               title={posts[4].node.frontmatter.title}
               half
             />
@@ -104,6 +113,7 @@ const BlogListTemplate = props => {
               description={posts[5].node.frontmatter.description}
               slug={posts[5].node.fields.slug}
               thumbnail={posts[5].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[5].node.frontmatter.thumbnailAlt}
               title={posts[5].node.frontmatter.title}
               half
             />
@@ -115,6 +125,7 @@ const BlogListTemplate = props => {
               description={posts[4].node.frontmatter.description}
               slug={posts[4].node.fields.slug}
               thumbnail={posts[4].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[4].node.frontmatter.thumbnailAlt}
               title={posts[4].node.frontmatter.title}
               large
             />
@@ -127,6 +138,7 @@ const BlogListTemplate = props => {
               description={posts[7].node.frontmatter.description}
               slug={posts[7].node.fields.slug}
               thumbnail={posts[7].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[7].node.frontmatter.thumbnailAlt}
               title={posts[7].node.frontmatter.title}
             />
             <ArticleBlock
@@ -134,6 +146,7 @@ const BlogListTemplate = props => {
               description={posts[8].node.frontmatter.description}
               slug={posts[8].node.fields.slug}
               thumbnail={posts[8].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[8].node.frontmatter.thumbnailAlt}
               title={posts[8].node.frontmatter.title}
             />
             <ArticleBlock
@@ -141,6 +154,7 @@ const BlogListTemplate = props => {
               description={posts[9].node.frontmatter.description}
               slug={posts[9].node.fields.slug}
               thumbnail={posts[9].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[9].node.frontmatter.thumbnailAlt}
               title={posts[9].node.frontmatter.title}
             />
           </>
@@ -151,6 +165,7 @@ const BlogListTemplate = props => {
               description={posts[7].node.frontmatter.description}
               slug={posts[7].node.fields.slug}
               thumbnail={posts[7].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[7].node.frontmatter.thumbnailAlt}
               title={posts[7].node.frontmatter.title}
               half
             />
@@ -159,6 +174,7 @@ const BlogListTemplate = props => {
               description={posts[8].node.frontmatter.description}
               slug={posts[8].node.fields.slug}
               thumbnail={posts[8].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[8].node.frontmatter.thumbnailAlt}
               title={posts[8].node.frontmatter.title}
               half
             />
@@ -170,6 +186,7 @@ const BlogListTemplate = props => {
               description={posts[7].node.frontmatter.description}
               slug={posts[7].node.fields.slug}
               thumbnail={posts[7].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[7].node.frontmatter.thumbnailAlt}
               title={posts[7].node.frontmatter.title}
               large
             />
@@ -181,6 +198,7 @@ const BlogListTemplate = props => {
             description={posts[10].node.frontmatter.description}
             slug={posts[10].node.fields.slug}
             thumbnail={posts[10].node.frontmatter.thumbnail}
+            thumbnailAlt={posts[10].node.frontmatter.thumbnailAlt}
             title={posts[10].node.frontmatter.title}
             large
           />
@@ -192,6 +210,7 @@ const BlogListTemplate = props => {
               description={posts[11].node.frontmatter.description}
               slug={posts[11].node.fields.slug}
               thumbnail={posts[11].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[11].node.frontmatter.thumbnailAlt}
               title={posts[11].node.frontmatter.title}
             />
             <ArticleBlock
@@ -199,6 +218,7 @@ const BlogListTemplate = props => {
               description={posts[12].node.frontmatter.description}
               slug={posts[12].node.fields.slug}
               thumbnail={posts[12].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[12].node.frontmatter.thumbnailAlt}
               title={posts[12].node.frontmatter.title}
             />
             <ArticleBlock
@@ -206,6 +226,7 @@ const BlogListTemplate = props => {
               description={posts[13].node.frontmatter.description}
               slug={posts[13].node.fields.slug}
               thumbnail={posts[13].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[13].node.frontmatter.thumbnailAlt}
               title={posts[13].node.frontmatter.title}
             />
           </>
@@ -216,6 +237,7 @@ const BlogListTemplate = props => {
               description={posts[11].node.frontmatter.description}
               slug={posts[11].node.fields.slug}
               thumbnail={posts[11].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[11].node.frontmatter.thumbnailAlt}
               title={posts[11].node.frontmatter.title}
               half
             />
@@ -224,6 +246,7 @@ const BlogListTemplate = props => {
               description={posts[12].node.frontmatter.description}
               slug={posts[12].node.fields.slug}
               thumbnail={posts[12].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[12].node.frontmatter.thumbnailAlt}
               title={posts[12].node.frontmatter.title}
               half
             />
@@ -235,6 +258,7 @@ const BlogListTemplate = props => {
               description={posts[11].node.frontmatter.description}
               slug={posts[11].node.fields.slug}
               thumbnail={posts[11].node.frontmatter.thumbnail}
+              thumbnailAlt={posts[11].node.frontmatter.thumbnailAlt}
               title={posts[11].node.frontmatter.title}
               large
             />
@@ -246,6 +270,7 @@ const BlogListTemplate = props => {
             description={posts[14].node.frontmatter.description}
             slug={posts[14].node.fields.slug}
             thumbnail={posts[14].node.frontmatter.thumbnail}
+            thumbnailAlt={posts[14].node.frontmatter.thumbnailAlt}
             title={posts[14].node.frontmatter.title}
             large
           />
@@ -277,6 +302,7 @@ export const pageQuery = graphql`
             templateKey
             title
             description
+            thumbnailAlt
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1600) {
