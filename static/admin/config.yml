@@ -31,6 +31,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Image alt", name: "thumbnailAlt", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages"
