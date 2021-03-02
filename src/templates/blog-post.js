@@ -48,9 +48,9 @@ export const BlogPostTemplate = props => {
           <a
             href={`https://github.com/kalm42/kyle-melton.com/blob/master/content/blog/${fileName}`}
           >
-            Click Here
-          </a>{" "}
-          to edit the page on GitHub.
+            Edit this page on GitHub
+          </a>
+          .
         </p>
       </footer>
     </article>
