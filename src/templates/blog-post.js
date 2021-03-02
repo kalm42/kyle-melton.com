@@ -4,16 +4,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Content, { HTMLContent } from "../components/content"
 import styles from "./blog-post.module.css"
+import Img from "gatsby-image"
 
 export const BlogPostTemplate = props => {
   const {
     content,
     contentComponent,
-    description,
-    tags,
-    title,
-    seo,
     filePath,
+    seo,
+    tags,
+    thumbnail,
+    title,
+    thumbnailAlt,
   } = props
   const PostContent = contentComponent || Content // Content is a component
   const exploded = filePath.split("/")
@@ -22,10 +24,10 @@ export const BlogPostTemplate = props => {
   return (
     <article className={styles.root}>
       {seo}
-      <div style={{ backgroundImage: null }}>
+      <Img fluid={thumbnail?.childImageSharp.fluid} alt={thumbnailAlt} />
+      <div>
         <h1>{title}</h1>
       </div>
-      <p>{description}</p>
       <PostContent content={content} />
       {!!tags.length && (
         <section>
@@ -60,18 +62,19 @@ const BlogPost = props => {
   const {
     html,
     fileAbsolutePath,
-    frontmatter: { description, title, tags },
+    frontmatter: { title, tags, thumbnail, description, thumbnailAlt },
   } = post
 
   return (
     <Layout>
       <BlogPostTemplate
         content={html}
-        filePath={fileAbsolutePath}
         contentComponent={HTMLContent}
-        description={description}
+        filePath={fileAbsolutePath}
         seo={<SEO title={`${title} | Blog`} description={description} />}
         tags={tags}
+        thumbnail={thumbnail}
+        thumbnailAlt={thumbnailAlt}
         title={title}
       />
     </Layout>
@@ -88,9 +91,17 @@ export const pageQuery = graphql`
       fileAbsolutePath
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        title
         description
         tags
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        thumbnailAlt
+        title
       }
     }
   }
