@@ -12,6 +12,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/why-not-to-use-wordpress.png
+thumbnailAlt: A sad child walking down a dirt road carrying a stuffed lion that is almost as large as the child.
 date: 2019-04-09T15:04:10.000Z
 ---
 

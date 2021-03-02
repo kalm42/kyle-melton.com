@@ -7,6 +7,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/how-to-make-a-css-gradient.png
+thumbnailAlt: Bright colors of a hot air baloon.
 date: 2019-04-30T15:04:10.000Z
 ---
 

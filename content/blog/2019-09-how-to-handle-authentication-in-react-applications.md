@@ -9,6 +9,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/how-to-handle-authentication-in-react-applications.png
+thumbnailAlt: Two security cameras on a pole.
 date: 2019-09-22T19:57:43.522Z
 ---
 

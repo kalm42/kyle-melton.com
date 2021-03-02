@@ -8,6 +8,7 @@ tags:
   - grid
 templateKey: "blog-post"
 thumbnail: /img/how-to-fill-in-css-grid-with-auto-fitting-content.png
+thumbnailAlt: Black and white shaddowed grid surface.
 title: "How to Fill In CSS Grid with Auto-Fitting Content"
 ---
 

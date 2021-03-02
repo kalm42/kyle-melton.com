@@ -7,8 +7,10 @@ description: My generic mocking code for Higher Order Components (HOC) and
 tags:
   - HOC
 thumbnail: /img/mocking-hoc-and-context.png
+thumbnailAlt: An aerial view of a big city.
 date: 2021-02-08T19:03:32.643Z
 ---
+
 My generic mocking code for Higher Order Components (HOC) and Context. I ran into this issue and I had resolved it before. Trying to find it a second time has told me I needed to write a blog entry for it.
 
 # First Up Higher Order Components (HOC)
@@ -16,11 +18,11 @@ My generic mocking code for Higher Order Components (HOC) and Context. I ran int
 ```javascript
 jest.mock("@HOC", () => {
   return {
-    withHOC: (Component) => {
-      return (props) => {
-        return <Component newProp={jest.fn} {...props} />;
+    withHOC: Component => {
+      return props => {
+        return <Component newProp={jest.fn} {...props} />
       }
-    }
+    },
   }
 })
 ```

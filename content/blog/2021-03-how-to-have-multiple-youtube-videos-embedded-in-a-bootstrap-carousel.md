@@ -10,8 +10,10 @@ description: A friend reached out to me for assistance with the JavaScript on
 tags:
   - bootstrap
 thumbnail: /img/bootstrap-carousel.png
+thumbnailAlt: People enjoying a carousel.
 date: 2021-03-01T01:17:49.820Z
 ---
+
 A friend reached out to me for assistance with the JavaScript on this. I thought I would share the final code and how it works so that others could use it.
 
 ## The Ask
@@ -141,27 +143,27 @@ It is important that all the video placeholders have the same class and have a [
 
 ```javascript
 // index.js
-const videos = [];
-const tag = document.createElement("script");
-const firstScriptTag = document.getElementsByTagName("script")[0];
+const videos = []
+const tag = document.createElement("script")
+const firstScriptTag = document.getElementsByTagName("script")[0]
 
-tag.src = "https://www.youtube.com/iframe_api";
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/iframe_api"
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
 // YouTube wants this function, don't rename it
 function onYouTubeIframeAPIReady() {
-  const slides = Array.from(document.querySelectorAll(".carousel-item"));
+  const slides = Array.from(document.querySelectorAll(".carousel-item"))
   slides.forEach((slide, index) => {
     // does this slide have a video?
-    const video = slide.querySelector(".video-player");
+    const video = slide.querySelector(".video-player")
     if (video && video.dataset) {
       const player = createPlayer({
         id: video.id,
         videoId: video.dataset.videoId,
-      });
-      videos.push({ player, index });
+      })
+      videos.push({ player, index })
     }
-  });
+  })
 }
 
 function createPlayer(playerInfo) {
@@ -170,23 +172,23 @@ function createPlayer(playerInfo) {
     playerVars: {
       showinfo: 0,
     },
-  });
+  })
 }
 
 function theBigPause() {
-  videos.map((video) => video.player.pauseVideo());
+  videos.map(video => video.player.pauseVideo())
 }
 
 $(function () {
   $(".carousel").on("slide.bs.carousel", function (e) {
-    theBigPause();
-    const next = $(e.relatedTarget).index();
-    const video = videos.filter((v) => v.index === next)[0];
+    theBigPause()
+    const next = $(e.relatedTarget).index()
+    const video = videos.filter(v => v.index === next)[0]
     if (video) {
-      video.player.playVideo();
+      video.player.playVideo()
     }
-  });
-});
+  })
+})
 ```
 
 First we make an array to hold references to the videos so that we can interact with them later.
@@ -207,7 +209,7 @@ We take the player reference and the index of the slide array the player relates
 
 Remember this is all done as the page is loading. So now that the video placeholders have been swapped out for the iframes and we have a collection of them we can look at what happens when a user changes the slide.
 
-This is all handled by the IIFE at the bottom. The first thing it does when the slide changes is make sure all videos are *not* playing. The `theBigPause` function loops through our videos array grabs the reference to the video player and programmatically pauses the video.
+This is all handled by the IIFE at the bottom. The first thing it does when the slide changes is make sure all videos are _not_ playing. The `theBigPause` function loops through our videos array grabs the reference to the video player and programmatically pauses the video.
 
 The next thing it does is get the index number of the slide we're going to.
 

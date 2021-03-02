@@ -4,6 +4,7 @@ date: 2019-09-22T16:50:21.663Z
 title: How to rename a destructed variable
 templateKey: blog-post
 thumbnail: /img/how-to-rename-a-destructed-variable.png
+thumbnailAlt: Macro shot of legos on the floor.
 description: How to rename a desctured variable.
 tags:
   - brewing

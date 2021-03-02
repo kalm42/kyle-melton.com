@@ -9,6 +9,7 @@ description: So, I've been teaching a friend JavaScript. During that I've been
 tags:
   - learning
 thumbnail: /img/questions-to-answer-when-learning-a-new-language.png
+thumbnailAlt: A bookcase full of books with a keyboard.
 date: 2021-02-19T22:53:23.054Z
 ---
 

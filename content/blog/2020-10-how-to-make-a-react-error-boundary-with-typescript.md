@@ -7,6 +7,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/how-to-make-a-react-error-boundary-with-typescript.png
+thumbnailAlt: Broken eggshell on grass.
 date: 2020-10-15T21:51:35.742Z
 ---
 
