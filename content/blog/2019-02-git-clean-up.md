@@ -9,6 +9,7 @@ tags:
   - grid
 templateKey: "blog-post"
 thumbnail: /img/remove-all-your-local-git-branches.png
+thumbnailAlt: Shopping cart full of trash atop of a pile of more rubbish.
 ---
 
 # Remove All Your Local Git Branches

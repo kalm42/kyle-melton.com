@@ -9,6 +9,7 @@ tags:
   - grid
 templateKey: "blog-post"
 thumbnail: /img/migrating-from-cra-to-next.png
+thumbnailAlt: A ship on a stormy sea.
 ---
 
 So I did it. I launched my side project. WHA? When I go to share this magnificant creation of mine on Facebook it just reads "React App" and not the custom headers I meticulously crafted with react-helmet! Well... I guess I really do need server side rendering. Time to switch to next...

@@ -8,6 +8,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/how-to-require-child-props-in-react.png
+thumbnailAlt: Two children celebrating in front of a macbook.
 date: 2019-05-06T15:04:10.000Z
 ---
 

@@ -4,6 +4,7 @@ date: 2020-07-26T21:51:35.742Z
 title: How to paginate a Prisma Graphql query with typescript
 templateKey: blog-post
 thumbnail: /img/how-to-paginate-a-prisma-graphql-query-with-typescript.png
+thumbnailAlt: A book open to roadmap with a pair of reading glasses resting on the open pages.
 description: How to paginate a thingy
 tags:
   - brewing

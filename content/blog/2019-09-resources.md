@@ -9,6 +9,7 @@ tags:
   - html
   - grid
 thumbnail: /img/resources-i-use.png
+thumbnailAlt: Black and white shot of a workshop
 date: 2019-09-12T15:04:10.000Z
 ---
 
@@ -58,8 +59,8 @@ Purchase repeating pattern assets.
 - [Humaaans](https://www.humaaans.com/)
 
 Doesn't have stock art, but is software for stock art.
-- [Blush](https://blush.design/)
 
+- [Blush](https://blush.design/)
 
 ## Icons
 

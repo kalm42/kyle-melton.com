@@ -9,6 +9,7 @@ tags:
   - brewing
   - chemex
 thumbnail: /img/getting-material-ui-class-names-to-not-change-for-snapshot-testing.png
+thumbnailAlt: Close up shot of flowers in a meadow at the foot of a tree.
 date: 2020-06-19T19:57:43.522Z
 ---
 

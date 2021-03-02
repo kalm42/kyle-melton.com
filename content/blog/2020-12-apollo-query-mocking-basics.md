@@ -11,6 +11,7 @@ tags:
   - testing
   - graphql
 thumbnail: /img/apollo-query-mocking-basics.png
+thumbnailAlt: The apollo lander capsule.
 date: 2020-12-14T19:57:43.522Z
 ---
 

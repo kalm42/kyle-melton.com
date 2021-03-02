@@ -9,8 +9,10 @@ description: Ugh, higher-order components. I'm not a fan, I've never been a fan
 tags:
   - testing
 thumbnail: /img/how-to-test-redux-connected-react-components.png
+thumbnailAlt: A adutitorium style college classroom
 date: 2021-02-17T22:26:11.434Z
 ---
+
 Ugh, higher-order components. I'm not a fan, I've never been a fan but they exist. They're all up in our code bases and they need to be tested like everything else. Like video games I go for 100%. Sometimes that means odd tests to make sure that I get some random edge case because some else clause isn't covered in tests.
 
 This is how to mock the redux state so that it get injected into your redux connected components.
@@ -19,7 +21,7 @@ This is how to mock the redux state so that it get injected into your redux conn
 
 ```javascript
 // App.js
-import { connect } from 'reat-redux'
+import { connect } from "reat-redux"
 
 const App = props => <div>{props.user}</div>
 
@@ -32,25 +34,26 @@ I know, it's amazing. Look at that elegance, the beauty in the simplicity. But g
 
 First up, extend the render method from `@testing-library/react`. Shout out to Kent C Dodds. His [testing javascript](https://testingjavascript.com/) course is how I learned testing. You should buy it. Go now, pay the man. Tangent over.
 
-We extend the render method to provide an initial state for the store. BOOM injected. The Emeril of render extensions — because of the boom. Anyway. 
+We extend the render method to provide an initial state for the store. BOOM injected. The Emeril of render extensions — because of the boom. Anyway.
 
 ```javascript
 // render-util.js
-import React from 'react'
-import { render } from '@testing-library/react'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import reducer from '../reducer' // <- that's your reducer
+import React from "react"
+import { render } from "@testing-library/react"
+import { createStore } from "redux"
+import { Provider } from "react-redux"
+import reducer from "../reducer" // <- that's your reducer
 
 function extRender(
-  ui, {
-    initialState, 
+  ui,
+  {
+    initialState,
     store = createStore(reducer, initialState),
-    ...renderOptions,
+    ...renderOptions
   } = {}
 ) {
   function Wrapper({ children }) {
-    return <Provider store={store}>{ children }</Provider>
+    return <Provider store={store}>{children}</Provider>
   }
   return render(ui, { wrapper: Wrapper, ...renderOptions })
 }
@@ -71,7 +74,7 @@ describe('App', () => {
   it('should show the user name', () => {
     const name = `LOREM IPSUM`
     extRender(<App>, { initialState: { user: name } })
-    
+
     expect(screen.getByText(name)).toBeInTheDocument()
   })
 })
@@ -81,4 +84,4 @@ describe('App', () => {
 
 Most of this code has been straight up copied from [Redux.js.org](https://redux.js.org/recipes/writing-tests) I've copied it here for my convienence. You should without a doubt go to that url and read what redux has to say about redux they are the official source.
 
-Photo by [Museums Victoria](https://unsplash.com/@museumsvictoria?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/school?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+Photo by [Museums Victoria](https://unsplash.com/@museumsvictoria?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/school?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

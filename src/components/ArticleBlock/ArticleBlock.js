@@ -6,7 +6,16 @@ import styles from "./ArticleBlock.module.css"
 import { format } from "date-fns"
 
 const ArticleBlock = props => {
-  const { thumbnail, date, title, description, slug, large, half } = props
+  const {
+    date,
+    description,
+    half,
+    large,
+    slug,
+    thumbnail,
+    thumbnailAlt,
+    title,
+  } = props
   return (
     <li
       className={`${styles["ArticleBlock"]} ${
@@ -22,7 +31,7 @@ const ArticleBlock = props => {
         to={slug}
       >
         <div className={styles["ArticleBlock__image"]}>
-          <Img fluid={thumbnail.childImageSharp.fluid} />
+          <Img fluid={thumbnail.childImageSharp.fluid} alt={thumbnailAlt} />
         </div>
         <div
           className={`${styles["ArticleBlock__text"]} ${
@@ -63,6 +72,7 @@ ArticleBlock.propTypes = {
       }),
     }),
   }),
+  thumbnailAlt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
