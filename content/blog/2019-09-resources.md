@@ -1,6 +1,6 @@
 ---
-slug: /resources
 templateKey: blog-post
+slug: /resources
 title: Resources I Use
 description: Resources I use to get stuff done. Everything from other blogs,
   images, patters, icons.
@@ -101,3 +101,4 @@ Doesn't have stock art, but is software for stock art.
 ## Web Based Tools
 
 - [Canva](https://www.canva.com/)
+- [CSS Triggers](https://csstriggers.com/)
