@@ -8,6 +8,7 @@
     "date-fns": "^2.16.1",
     "gatsby": "^2.24.54",
     "gatsby-image": "^2.4.17",
+    "gatsby-plugin-google-tagmanager": "^3.14.0",
     "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-netlify": "^2.6.0",
     "gatsby-plugin-netlify-cms": "^4.3.13",

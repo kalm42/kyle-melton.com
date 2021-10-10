@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -29,7 +30,7 @@ export const ContactPageTemplate = props => {
   )
 }
 
-export default ({ data }) => {
+const ContactPage = ({ data }) => {
   const { phoneNumber, email, address } = data.markdownRemark.frontmatter
 
   return (
@@ -42,6 +43,7 @@ export default ({ data }) => {
     </Layout>
   )
 }
+export default ContactPage
 
 export const pageQuery = graphql`
   query ContactPageTemplate {

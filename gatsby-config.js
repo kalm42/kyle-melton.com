@@ -53,10 +53,18 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-5QLZP2Z`,
+        includeInDevelopment: false,
+        enableWebVitals: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Kyle-Melton`,
+        short_name: `Kyle`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
