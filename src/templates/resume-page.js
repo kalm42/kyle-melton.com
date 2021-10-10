@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -85,7 +86,7 @@ export const ResumePageTemplate = props => {
   )
 }
 
-export default ({ data }) => {
+const ResumePage = ({ data }) => {
   const {
     title,
     workExperience,
@@ -108,6 +109,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default ResumePage
 
 export const pageQuery = graphql`
   query ResumePageTemplate {

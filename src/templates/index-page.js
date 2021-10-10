@@ -1,12 +1,15 @@
+/* eslint-disable */
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import LatestBlogs from "../components/LatestBlogs/LatestBlogs"
+import SEO from "../components/seo"
 
 export const IndexPageTemplate = props => {
   const { heading = "", subheading = "", mainpitch = "" } = props
   return (
     <div>
+      <SEO title={`Kyle Melton, JavaScript Developer`} />
       <header>
         <h1>{heading}</h1>
         <h3>{subheading}</h3>
@@ -24,7 +27,7 @@ export const IndexPageTemplate = props => {
   )
 }
 
-export default ({ data }) => {
+const IndexPage = ({ data }) => {
   const { heading, subheading, mainpitch } = data.markdownRemark.frontmatter
 
   return (
@@ -37,6 +40,7 @@ export default ({ data }) => {
     </Layout>
   )
 }
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
