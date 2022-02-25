@@ -12,10 +12,6 @@ thumbnailAlt: Two children celebrating in front of a macbook.
 date: 2019-05-06T15:04:10.000Z
 ---
 
-# How to Require Child Props in React
-
-![How to require child props in react](images/2019-05-06-how-to-require-child-props-in-react.png)
-
 You have a component and the child of that component needs to be one or more HTML elements. How do you properly set the prop types for this?
 
 ```
