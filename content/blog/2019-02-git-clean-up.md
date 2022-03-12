@@ -1,5 +1,5 @@
 ---
-slug: "/git-clean-up"
+slug: "2019-02-git-clean-up"
 title: "Remove All Your Local Git Branches"
 date: 2019-02-19T15:04:10.000Z
 description: Clear up hard disk space by removing all your old git branches.
