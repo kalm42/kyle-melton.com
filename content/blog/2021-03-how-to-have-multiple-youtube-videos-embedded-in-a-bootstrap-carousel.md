@@ -11,6 +11,7 @@ tags:
   - bootstrap
 thumbnail: /img/bootstrap-carousel.png
 thumbnailAlt: People enjoying a carousel.
+slug: how-to-have-multiple-youtube-videos-embedded-in-a-bootstrap-carousel
 date: 2021-03-01T01:17:49.820Z
 ---
 
@@ -35,11 +36,7 @@ First the HTML for the slides.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Image & Youtube Video Carousel For Bootstrap 4 Example</title>
-    <link
-      href="https://www.jqueryscript.net/css/jquerysctipttop.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -54,72 +51,33 @@ First the HTML for the slides.
   </head>
   <body>
     <div class="container contenedor-slide">
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-ride="carousel"
-        data-interval="false"
-      >
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="https://source.unsplash.com/Be8TdJZPaBE/1280x720"
-              alt="First slide"
-            />
+            <img class="d-block w-100" src="https://source.unsplash.com/Be8TdJZPaBE/1280x720" alt="First slide" />
           </div>
           <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="https://source.unsplash.com/0crv9tTkzhk/1280x720"
-              alt="Second slide"
-            />
+            <img class="d-block w-100" src="https://source.unsplash.com/0crv9tTkzhk/1280x720" alt="Second slide" />
           </div>
           <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="https://source.unsplash.com/8LWtpfhGP4U/1280x720"
-              alt="Third slide"
-            />
+            <img class="d-block w-100" src="https://source.unsplash.com/8LWtpfhGP4U/1280x720" alt="Third slide" />
           </div>
           <div class="carousel-item">
-            <div
-              class="carousel-video-inner embed-responsive embed-responsive-16by9"
-            >
-              <div
-                class="video-player"
-                id="player1"
-                data-video-id="dOy7vPwEtCw"
-              ></div>
+            <div class="carousel-video-inner embed-responsive embed-responsive-16by9">
+              <div class="video-player" id="player1" data-video-id="dOy7vPwEtCw"></div>
             </div>
           </div>
           <div class="carousel-item">
-            <div
-              class="carousel-video-inner embed-responsive embed-responsive-16by9"
-            >
-              <div
-                class="video-player"
-                id="player2"
-                data-video-id="QWtsV50_-p4"
-              ></div>
+            <div class="carousel-video-inner embed-responsive embed-responsive-16by9">
+              <div class="video-player" id="player2" data-video-id="QWtsV50_-p4"></div>
             </div>
           </div>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -143,27 +101,27 @@ It is important that all the video placeholders have the same class and have a [
 
 ```javascript
 // index.js
-const videos = []
-const tag = document.createElement("script")
-const firstScriptTag = document.getElementsByTagName("script")[0]
+const videos = [];
+const tag = document.createElement("script");
+const firstScriptTag = document.getElementsByTagName("script")[0];
 
-tag.src = "https://www.youtube.com/iframe_api"
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+tag.src = "https://www.youtube.com/iframe_api";
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // YouTube wants this function, don't rename it
 function onYouTubeIframeAPIReady() {
-  const slides = Array.from(document.querySelectorAll(".carousel-item"))
+  const slides = Array.from(document.querySelectorAll(".carousel-item"));
   slides.forEach((slide, index) => {
     // does this slide have a video?
-    const video = slide.querySelector(".video-player")
+    const video = slide.querySelector(".video-player");
     if (video && video.dataset) {
       const player = createPlayer({
         id: video.id,
         videoId: video.dataset.videoId,
-      })
-      videos.push({ player, index })
+      });
+      videos.push({ player, index });
     }
-  })
+  });
 }
 
 function createPlayer(playerInfo) {
@@ -172,23 +130,23 @@ function createPlayer(playerInfo) {
     playerVars: {
       showinfo: 0,
     },
-  })
+  });
 }
 
 function theBigPause() {
-  videos.map(video => video.player.pauseVideo())
+  videos.map((video) => video.player.pauseVideo());
 }
 
 $(function () {
   $(".carousel").on("slide.bs.carousel", function (e) {
-    theBigPause()
-    const next = $(e.relatedTarget).index()
-    const video = videos.filter(v => v.index === next)[0]
+    theBigPause();
+    const next = $(e.relatedTarget).index();
+    const video = videos.filter((v) => v.index === next)[0];
     if (video) {
-      video.player.playVideo()
+      video.player.playVideo();
     }
-  })
-})
+  });
+});
 ```
 
 First we make an array to hold references to the videos so that we can interact with them later.

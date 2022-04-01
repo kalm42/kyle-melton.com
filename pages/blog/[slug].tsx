@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Error from "next/error";
 import React from "react";
 import { GetStaticProps } from "next";
-import { getAllPosts, getPostBySlug } from "../../lib/posts";
+import { BlogPost, getAllPosts, getPostBySlug } from "../../lib/posts";
 import markdownToHTML from "../../lib/markdownToHtml";
 import Container from "../../components/Container";
 import Layout from "../../components/Layout";
@@ -13,21 +13,22 @@ import PostHeader from "../../components/PostHeader";
 import PostBody from "../../components/PostBody";
 
 export interface PostProps {
-  post: any;
+  post: BlogPost;
+  content: string;
   preview: boolean;
 }
 
 const Post = (props: PostProps) => {
-  const { post, preview } = props;
+  const { post, preview, content } = props;
   const router = useRouter();
 
   // If there's no post show 404
-  if (!router.isFallback && !post.slug) {
-    return <Error statusCode={404} />;
-  }
+  // if (!router.isFallback && !post.slug) {
+  //   return <Error statusCode={404} />;
+  // }
 
   return (
-    <Layout preview={preview}>
+    <Layout preview={false}>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -37,10 +38,10 @@ const Post = (props: PostProps) => {
             <article className="mb-32">
               <Head>
                 <title>{post.title} | Kyle Melton</title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={post.thumbnail} />
               </Head>
-              <PostHeader slug={post.slug} title={post.title} coverImage={post.coverImage} date={post.date} />
-              <PostBody content={post.content} />
+              <PostHeader slug={post.slug} title={post.title} coverImage={post.thumbnail} date={post.date} />
+              <PostBody content={content} />
             </article>
           </>
         )}
@@ -52,7 +53,6 @@ const Post = (props: PostProps) => {
 export default Post;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log({ context });
   let slug = context.params?.slug;
 
   if (!slug) {
@@ -65,16 +65,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const post = getPostBySlug(slug, ["title", "date", "slug", "description", "tags", "thumbnail", "thumbnailAlt"]);
   const content = await markdownToHTML(post.content || "");
-
-  return { props: { post: { ...post, content } } };
+  return { props: { post: post.data, content } };
 };
 
 export async function getStaticPaths() {
   const posts = getAllPosts(["slug"]);
-  console.log({ posts });
 
   return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
+    paths: posts.map((post) => ({ params: { slug: post.data.slug } })),
     fallback: false,
   };
 }

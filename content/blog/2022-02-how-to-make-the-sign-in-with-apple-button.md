@@ -12,8 +12,10 @@ tags:
   - ""
 thumbnail: /img/how-to-make-the-sign-in-with-apple-button.png
 thumbnailAlt: How to make the sign in with Apple button
+slug: how-to-make-the-sign-in-with-apple-button
 date: 2022-02-26T22:40:25.713Z
 ---
+
 You might want to take a look at Apple’s [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/buttons/) for creating a custom Sign In with Apple button.
 
 Go [here](https://developer.apple.com/design/resources/) and grab the apple logo. The logos are about 1/2 way down just above the Fonts section at the time I’m writing this. Your experience may be different. Download the PNG, PDF, SVG. Open the DMG file. Pull out the svg files. Now you would think that here you would be able to get Apple's San Francisco font here for display on the web since I'm sure that's the font they would like you to use but no. I eventually found a link to it [here](https://stackoverflow.com/a/36412339/1804634). StackOverflow to the rescue once again. I downloaded the file because I don't trust that URL to stay working.
@@ -37,19 +39,19 @@ Ok, so now our application can use the San Francisco font. Let's make a componen
 
 ```ts
 // component/SignInWithApple/SignInWithAppple.tsx
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-import AppleIconLarge from "./siwa-left-aligned-white-large.svg"
-import AppleIconMedium from "./siwa-left-aligned-white-medium.svg"
-import AppleIconSmall from "./siwa-left-aligned-white-small.svg"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import AppleIconLarge from "./siwa-left-aligned-white-large.svg";
+import AppleIconMedium from "./siwa-left-aligned-white-medium.svg";
+import AppleIconSmall from "./siwa-left-aligned-white-small.svg";
 
 interface SignInWithAppleProps {
-  signinUrl: string
+  signinUrl: string;
 }
 
 const SignInWithApple = (props: SignInWithAppleProps) => {
-  const { signinUrl } = props
+  const { signinUrl } = props;
   return (
     <>
       <Head>
@@ -95,19 +97,19 @@ const SignInWithApple = (props: SignInWithAppleProps) => {
         </Link>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SignInWithApple
+export default SignInWithApple;
 ```
 
 Nothing particularly weird in this file. Just thought I'd give you the specifics.
 
 ```ts
 // component/SignInWithApple/index.ts
-import SignInWithApple from "./SignInWithApple"
+import SignInWithApple from "./SignInWithApple";
 
-export default SignInWithApple
+export default SignInWithApple;
 ```
 
-We import the component and re-export again to make our import statements more concise. 
+We import the component and re-export again to make our import statements more concise.

@@ -8,6 +8,7 @@ tags:
   - HOC
 thumbnail: /img/mocking-hoc-and-context.png
 thumbnailAlt: An aerial view of a big city.
+slug: mocking-higher-order-components-hoc-and-context
 date: 2021-02-08T19:03:32.643Z
 ---
 
@@ -18,13 +19,13 @@ My generic mocking code for Higher Order Components (HOC) and Context. I ran int
 ```javascript
 jest.mock("@HOC", () => {
   return {
-    withHOC: Component => {
-      return props => {
-        return <Component newProp={jest.fn} {...props} />
-      }
+    withHOC: (Component) => {
+      return (props) => {
+        return <Component newProp={jest.fn} {...props} />;
+      };
     },
-  }
-})
+  };
+});
 ```
 
 A quick explanation. `"@HOC"` is the external or internal package that you're mocking. `withHOC` is the name of the Higher Order Component composition function. `Component` is the component to wrap in the mocked HOC. `props` are the normal props the component would get. `newProp` refers to any new props the HOC would add that you need to mock.

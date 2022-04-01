@@ -1,5 +1,4 @@
 import React from "react";
-import Alert from "./Alert";
 import Footer from "./Footer";
 import Meta from "./Meta";
 
@@ -13,8 +12,7 @@ const Layout = (props: LayoutProps) => {
     <>
       <Meta />
       <div className="min-h-screen">
-        <Alert preview={preview} />
-        <main>{children}</main>
+        <main className={preview ? " border border-red" : ""}>{children}</main>
       </div>
       <Footer />
     </>

@@ -1,17 +1,14 @@
 import React from "react";
+import H1 from "./base/H1";
 
 interface PostTitleProps {
-  children: React.ReactNode;
+  children: string;
 }
 
 const PostTitle = (props: PostTitleProps) => {
   const { children } = props;
 
-  return (
-    <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-      {children}
-    </h1>
-  );
+  return <h1>{children}</h1>;
 };
 
 export default PostTitle;

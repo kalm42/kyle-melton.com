@@ -10,6 +10,7 @@ tags:
   - learning
 thumbnail: /img/questions-to-answer-when-learning-a-new-language.png
 thumbnailAlt: A bookcase full of books with a keyboard.
+slug: questions-to-answer-when-learning-a-new-language
 date: 2021-02-19T22:53:23.054Z
 ---
 
@@ -271,8 +272,8 @@ Short hand if else. \*This must be used as an expression and not a statement. In
 The logical and will return the right hand side if the left is truthy.
 
 ```javascript
-true && someFunction() // some function will run.
-const variableName = true && someGetter()
+true && someFunction(); // some function will run.
+const variableName = true && someGetter();
 // the return value of someGetter will be assigned to variableName.
 ```
 
@@ -285,14 +286,14 @@ I only know how to describe when you would want to use it. If you have a lot (re
 ```javascript
 switch (variableToCheck) {
   case possibleValue:
-    doSomething()
-    break // If you don't break the next lines WILL be run.
+    doSomething();
+    break; // If you don't break the next lines WILL be run.
   case anotherPossibleValue:
   case yetAnotherPossibleValue:
-    doAnotherThing() // both of the above cases will run this code
-    break
+    doAnotherThing(); // both of the above cases will run this code
+    break;
   default:
-    doDefaultThing() // if none of the cases match this is run
+    doDefaultThing(); // if none of the cases match this is run
 }
 ```
 
@@ -309,7 +310,7 @@ With the built in function `setInterval`
 There's a lot more than the snippet below so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
 
 ```javascript
-setTimeout(function () {}, delayTimeInMiliseconds)
+setTimeout(function () {}, delayTimeInMiliseconds);
 ```
 
 ## What is the syntax for setInterval?
@@ -317,7 +318,7 @@ setTimeout(function () {}, delayTimeInMiliseconds)
 There's more than the snippet below shows so I highly suggest going to the MDN docs. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 ```javascript
-setInterval(function () {}, delayTimeInMiliseconds)
+setInterval(function () {}, delayTimeInMiliseconds);
 ```
 
 ## Can you control the order of properties in an object?
@@ -337,8 +338,8 @@ String, number, or any JS valid naming convention.
 ```javascript
 const objectVariable = {
   has: "values",
-}
-Object.freeze(objectVariable)
+};
+Object.freeze(objectVariable);
 ```
 
 ## How can you access properties in an object?
@@ -346,15 +347,15 @@ Object.freeze(objectVariable)
 ```javascript
 const variable = {
   prop: true,
-}
-variable.prop
-variable["prop"]
-const p = "prop"
-variable[p]
+};
+variable.prop;
+variable["prop"];
+const p = "prop";
+variable[p];
 function get() {
-  return "prop"
+  return "prop";
 }
-variable[get()]
+variable[get()];
 ```
 
 ## How do you access a deeply nested property?
@@ -368,18 +369,18 @@ const variable = {
       "a-third-prop": true,
     },
   },
-}
-variable.prop.anotherProp["a-third-prop"]
-variable["prop"]["anotherProp"]["a-third-prop"]
-const p = "prop"
-variable[p].anotherProp["a-third-prop"]
+};
+variable.prop.anotherProp["a-third-prop"];
+variable["prop"]["anotherProp"]["a-third-prop"];
+const p = "prop";
+variable[p].anotherProp["a-third-prop"];
 function get() {
-  return "prop"
+  return "prop";
 }
 function what() {
-  return "third"
+  return "third";
 }
-variable[get()].anotherProp[`a-${what()}-prop`]
+variable[get()].anotherProp[`a-${what()}-prop`];
 ```
 
 ## How do you remove a property from an object?
@@ -389,8 +390,8 @@ With the `delete` keyword.
 ```javascript
 const variable = {
   prop: "something",
-}
-delete variable.prop
+};
+delete variable.prop;
 ```
 
 ## How do you add a property to an object?
@@ -398,10 +399,10 @@ delete variable.prop
 You assign it a value.
 
 ```javascript
-const variable = {}
+const variable = {};
 
-variable.prop = null
-variable["another prop"] = null
+variable.prop = null;
+variable["another prop"] = null;
 // so on an so forth
 ```
 
@@ -412,9 +413,9 @@ In JS it's a function in an object. In all other languages it's a function in a 
 ```javascript
 const variable = {
   method: function () {
-    return `I'm a method.`
+    return `I'm a method.`;
   },
-}
+};
 ```
 
 ## What is this?
@@ -425,12 +426,12 @@ const variable = {
 const variable = {
   prop: true,
   method: function () {
-    return this.prop ? "Hi" : "Bye"
+    return this.prop ? "Hi" : "Bye";
   },
-}
-variable.method() // 'Hi'
-variable.prop = false
-variable.method() // 'Bye'
+};
+variable.method(); // 'Hi'
+variable.prop = false;
+variable.method(); // 'Bye'
 ```
 
 ## Do arrow function scope this?
@@ -444,12 +445,12 @@ const parentVariable = {
     return {
       name: "Tyler",
       method: () => {
-        return `Hi ${this.name}`
+        return `Hi ${this.name}`;
       },
-    }
+    };
   },
-}
-parentVariable.prop().method() // 'Hi Kyle', because this is inherited
+};
+parentVariable.prop().method(); // 'Hi Kyle', because this is inherited
 ```
 
 ## What is assignment by value?
@@ -463,7 +464,7 @@ When assigning a variable a value by reference the variable does not get a chunk
 They are compared by referrence not by value. If you need to compare two basic objects the easiest way is this.
 
 ```javascript
-const doesMatch = JSON.stringify(object1) === JSON.stringify(object2)
+const doesMatch = JSON.stringify(object1) === JSON.stringify(object2);
 ```
 
 This transforms the the objects into strings making it quick and easy to compare the two strings if there are any key or value differences it will return false. The catch is that the object must be string-able. Objects with circular references will not work with this strategy.
@@ -473,7 +474,7 @@ This transforms the the objects into strings making it quick and easy to compare
 Using the assignment operator.
 
 ```javascript
-const newObject = oldObject
+const newObject = oldObject;
 ```
 
 ## How do you copy an= object by reference?
@@ -486,8 +487,8 @@ The first way is the old school [`Object.assign()`](https://developer.mozilla.or
 const someObject = {
   has: "properties",
   and: { also: { has: { deeply: { nested: { values: 1 } } } } },
-}
-const otherObject = Object.assign({}, someObject)
+};
+const otherObject = Object.assign({}, someObject);
 ```
 
 This will copy all enumerable own properties from the second argument onto the first arguement. We make the first arguemnt an empty object to get a straight copy.
@@ -498,8 +499,8 @@ The second way is with the spread operator.
 const someObject = {
   has: "properties",
   and: { also: { has: { deeply: { nested: { values: 1 } } } } },
-}
-const otherObject = { ...someObject }
+};
+const otherObject = { ...someObject };
 ```
 
 There's a downside to this approach. Only the first level of properties are copied over by value everything after that is copied by reference. So... watch out.
@@ -510,8 +511,8 @@ The third way is kinda silly but works. Stringify and then parse the source obje
 const someObject = {
   has: "properties",
   and: { also: { has: { deeply: { nested: { values: 1 } } } } },
-}
-const otherObject = JSON.parse(JSON.stringify(someObject))
+};
+const otherObject = JSON.parse(JSON.stringify(someObject));
 ```
 
 This will copy everything stringable from one to the other.
@@ -533,8 +534,8 @@ It is the string representation of a basic JavaScript object. To make JSON we us
 ```javascript
 const someObject = {
   has: "values",
-}
-const string = JSON.stringify(someObject) // '{"has":"values"}'
+};
+const string = JSON.stringify(someObject); // '{"has":"values"}'
 ```
 
 ## What is an array?
@@ -546,8 +547,8 @@ An array is an ordered collection of values.
 With the index of the item.
 
 ```javascript
-const arr = ["💩", "🚰", "😩"]
-arr[1] // 🚰
+const arr = ["💩", "🚰", "😩"];
+arr[1]; // 🚰
 ```
 
 ## What is the index?
@@ -563,8 +564,8 @@ It is the position of an item in an array.
 With the length property.
 
 ```javascript
-const arr = ["💩", "🚰", "😩"]
-arr.length // 3
+const arr = ["💩", "🚰", "😩"];
+arr.length; // 3
 ```
 
 ## What can you put in an array?
@@ -577,8 +578,8 @@ Like this.
 
 ```javascript
 // literal
-const fruits = ["🍎", "🍌"]
-const animals = new Array("🐵", "🐶")
+const fruits = ["🍎", "🍌"];
+const animals = new Array("🐵", "🐶");
 ```
 
 ## Does an array have keys?
@@ -602,8 +603,8 @@ Yes. Check MDN to see if the method is destructive or not.
 You first copy the original variable.
 
 ```javascript
-const fruits = ["🍎", "🍌"]
-const newFruits = [...fruits].reverse() // ["🍌", "🍎"]
+const fruits = ["🍎", "🍌"];
+const newFruits = [...fruits].reverse(); // ["🍌", "🍎"]
 ```
 
 ## How do you add an item to an array?
@@ -611,9 +612,9 @@ const newFruits = [...fruits].reverse() // ["🍌", "🍎"]
 With the `push` method.
 
 ```javascript
-const fruits = ["🍎", "🍌"]
-fruits.push("🥭")
-console.log(fruits) // ["🍎", "🍌", "🥭"]
+const fruits = ["🍎", "🍌"];
+fruits.push("🥭");
+console.log(fruits); // ["🍎", "🍌", "🥭"]
 ```
 
 ## Is push destructive?
@@ -625,9 +626,9 @@ Yes.
 With the `unshift` method. Why unshift? Because `shift` removes the first element.
 
 ```javascript
-const fruits = ["🍎", "🍌"]
-fruits.unshift("🥭")
-console.log(fruits) // ["🥭", "🍎", "🍌"]
+const fruits = ["🍎", "🍌"];
+fruits.unshift("🥭");
+console.log(fruits); // ["🥭", "🍎", "🍌"]
 ```
 
 ## What does slice do?
@@ -643,12 +644,12 @@ Removes, replaces, or inserts a portion of an array. See [MDN](https://developer
 With splice or with stragetic copying.
 
 ```javascript
-const fruits = ["🍎", "🍌"]
-fruits.splice(1, 0, "🥭")
-console.log(fruits) // ["🍎", "🥭", "🍌"]
+const fruits = ["🍎", "🍌"];
+fruits.splice(1, 0, "🥭");
+console.log(fruits); // ["🍎", "🥭", "🍌"]
 // OR
-const fruits = ["🍎", "🍌"]
-const newFruits = [...fruits.slice(0, 1), "🥭", ...fruits.slice(1)]
+const fruits = ["🍎", "🍌"];
+const newFruits = [...fruits.slice(0, 1), "🥭", ...fruits.slice(1)];
 ```
 
 The first one is destructive, the original variable is mutated. The second is non-destructive.
@@ -658,12 +659,12 @@ The first one is destructive, the original variable is mutated. The second is no
 With splice or with stragetic copying.
 
 ```javascript
-const fruits = ["🍎", "🥭", "🍌"]
-fruits.splice(1, 1)
-console.log(fruits) // ["🍎", "🍌"]
+const fruits = ["🍎", "🥭", "🍌"];
+fruits.splice(1, 1);
+console.log(fruits); // ["🍎", "🍌"]
 // OR
-const fruits = ["🍎", "🥭", "🍌"]
-const newFruits = [...fruits.slice(0, 1), ...fruits.slice(2)]
+const fruits = ["🍎", "🥭", "🍌"];
+const newFruits = [...fruits.slice(0, 1), ...fruits.slice(2)];
 ```
 
 The first one is destructive because the variable is mutated. The second is non-destructive because the variable is not mutated.
@@ -673,11 +674,11 @@ The first one is destructive because the variable is mutated. The second is non-
 Like this:
 
 ```javascript
-const fruits = ["🍎", "🥭", "🍌"]
-const [apple, mango, ...other] = fruits
-console.log(apple) // "🍎"
-console.log(mango) // "🥭"
-console.log(banana) // ["🍌"]
+const fruits = ["🍎", "🥭", "🍌"];
+const [apple, mango, ...other] = fruits;
+console.log(apple); // "🍎"
+console.log(mango); // "🥭"
+console.log(banana); // ["🍌"]
 ```
 
 The last one isn't required just an example of how to collect n number entries.
@@ -692,11 +693,11 @@ const fruits = {
   mango: "🥭",
   banana: "🍌",
   peach: "🍑",
-}
-const { apple, mango, ...other } = fruits
-console.log(apple) // "🍎"
-console.log(mango) // "🥭"
-console.log(other) // { banana: "🍌", peach: "🍑" }
+};
+const { apple, mango, ...other } = fruits;
+console.log(apple); // "🍎"
+console.log(mango); // "🥭"
+console.log(other); // { banana: "🍌", peach: "🍑" }
 ```
 
 The last one isn't required just an example of how to collect n number entries.
@@ -708,12 +709,12 @@ The last one isn't required just an example of how to collect n number entries.
 like this:
 
 ```javascript
-const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆", "🌮", "🌮"]
-const isTacoFruit = fruits.includes("🌮") // true, tacos are life
-const tacoIndex = fruits.indexOf("🌮") // 5
-const lastTaco = fruits.lastIndexOf("🌮") // 6
-const tacoIndexHunt = fruits.findIndex(fruit => fruit === "🌮") // 5
-const tacoHunt = fruits.find(fruit => fruit === "🌮") // "🌮"
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆", "🌮", "🌮"];
+const isTacoFruit = fruits.includes("🌮"); // true, tacos are life
+const tacoIndex = fruits.indexOf("🌮"); // 5
+const lastTaco = fruits.lastIndexOf("🌮"); // 6
+const tacoIndexHunt = fruits.findIndex((fruit) => fruit === "🌮"); // 5
+const tacoHunt = fruits.find((fruit) => fruit === "🌮"); // "🌮"
 ```
 
 Okay, yes some don't return an index but instead return the entry but these are basically every array search method apart from filter, map, every, forEach, reduce, reduceRight, and sort.
@@ -724,12 +725,12 @@ There are two ways. One destructive and one non-destructive. Okay, that's a lie,
 
 ```javascript
 // destructive
-const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
-fruits.reverse() // ["🍆", "🍑", "🍌", "🥭", "🍎"]
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"];
+fruits.reverse(); // ["🍆", "🍑", "🍌", "🥭", "🍎"]
 
 // non-destructive
-const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
-const newFruits = [...fruits].reverse() // ["🍆", "🍑", "🍌", "🥭", "🍎"]
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"];
+const newFruits = [...fruits].reverse(); // ["🍆", "🍑", "🍌", "🥭", "🍎"]
 ```
 
 ## How do you write a function generator?
@@ -739,12 +740,12 @@ It's a function that returns a function.
 ```javascript
 function findByFood(food) {
   return function (foods) {
-    return foods.food.includes(food)
-  }
+    return foods.food.includes(food);
+  };
 }
-const food = [{ food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }, { food: ["🍔", "🍿"] }]
-const findApple = findByFood("🍎")
-const apple = food.find(findApple) // { food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }
+const food = [{ food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }, { food: ["🍔", "🍿"] }];
+const findApple = findByFood("🍎");
+const apple = food.find(findApple); // { food: ["🍎", "🥭", "🍌", "🍑", "🍆"] }
 ```
 
 ## How do you loop through all the items in an array?
@@ -759,32 +760,32 @@ So with arrays we have _drum roll_:
 - [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```javascript
-const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"]
+const fruits = ["🍎", "🥭", "🍌", "🍑", "🍆"];
 
 // map - returns a new array, takes callback function as an argument
-const allTurtles = fruits.map(fruit => {
-  return fruit + "🐢"
-})
-console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+const allTurtles = fruits.map((fruit) => {
+  return fruit + "🐢";
+});
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
 
 // forEach - returns void, takes a callback function as an argument
-const allTurtles = []
-fruits.forEach(fruit => {
-  allTurtles.push(`${fruit}🐢`)
-})
-console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+const allTurtles = [];
+fruits.forEach((fruit) => {
+  allTurtles.push(`${fruit}🐢`);
+});
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
 
 // standard for loop
-const allTurtles = []
+const allTurtles = [];
 for (let i = 0; i < fruits.length; i++) {
-  const fruit = fruits[i]
-  allTurtles.push(`${fruit}🐢`)
+  const fruit = fruits[i];
+  allTurtles.push(`${fruit}🐢`);
 }
-console.log(allTurtles) // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
+console.log(allTurtles); // ["🍎🐢", "🥭🐢", "🍌🐢", "🍑🐢", "🍆🐢"]
 
 // for...of
 for (const fruit of fruits) {
-  console.log(fruit) // "🍎"
+  console.log(fruit); // "🍎"
 }
 ```
 
@@ -806,31 +807,31 @@ const fruits = {
   banana: "🍌",
   peach: "🍑",
   eggplant: "🍆",
-}
+};
 // Object.entries
-const otherFruits = Object.entries(fruits)
+const otherFruits = Object.entries(fruits);
 // [["apple", "🍎"], ["mango", "🥭"], ["banana", "🍌"] ...]
 // We can shorten this with array destructuring
 for (const [key, value] of Object.entries(fruits)) {
-  console.log(key) // "apple"
-  console.log(value) // "🍎"
+  console.log(key); // "apple"
+  console.log(value); // "🍎"
 }
 
 // Object.keys
-const keys = Object.keys(fruits) // ["apple", "mango", ...]
-keys.map(key => {
-  const fruit = fruits[key]
-  console.log(key) // "apple"
-  console.log(fruit) // "🍎"
-})
+const keys = Object.keys(fruits); // ["apple", "mango", ...]
+keys.map((key) => {
+  const fruit = fruits[key];
+  console.log(key); // "apple"
+  console.log(fruit); // "🍎"
+});
 
 // Object.values
-const keys = Object.values(fruits) // ["🍎", "🥭", "🍌", "🍑", "🍆"]
+const keys = Object.values(fruits); // ["🍎", "🥭", "🍌", "🍑", "🍆"]
 
 // for..in
 for (const property in fruits) {
-  console.log(property) // "apple"
-  const fruit = fruits[property]
-  console.log(fruit) // "🍎"
+  console.log(property); // "apple"
+  const fruit = fruits[property];
+  console.log(fruit); // "🍎"
 }
 ```

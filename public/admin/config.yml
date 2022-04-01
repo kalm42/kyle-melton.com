@@ -21,12 +21,8 @@ collections:
     extension: "md"
     slug: "{{year}}-{{month}}-{{title}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
-        }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
@@ -41,12 +37,7 @@ collections:
         label: "Landing Page"
         file: "content/index.md"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
-            }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
@@ -63,12 +54,7 @@ collections:
         label: "Contact Page"
         file: "content/contact.md"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "contact-page",
-            }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page" }
           - { label: Phone Number, name: phoneNumber, widget: string }
           - { label: Email, name: email, widget: string }
           - { label: Address, name: address, widget: text }
@@ -76,12 +62,7 @@ collections:
         label: "Resume"
         file: "content/resume.md"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "resume-page",
-            }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "resume-page" }
           - { label: "Title", name: "title", widget: "string" }
           - {
               label: "Work Experience",
@@ -93,17 +74,8 @@ collections:
                   { label: "Company", name: "company", widget: "string" },
                   { label: "Job Title", name: "jobTitle", widget: "string" },
                   { label: "Start Date", name: "startDate", widget: "date" },
-                  {
-                    label: "End Date",
-                    name: "endDate",
-                    widget: "date",
-                    required: false,
-                  },
-                  {
-                    label: "Job Description",
-                    name: "jobDescription",
-                    widget: "text",
-                  },
+                  { label: "End Date", name: "endDate", widget: "date", required: false },
+                  { label: "Job Description", name: "jobDescription", widget: "text" },
                 ],
             }
           - {
@@ -115,11 +87,7 @@ collections:
                 [
                   { label: "College", name: "college", widget: "string" },
                   { label: "Degree", name: "degree", widget: "string" },
-                  {
-                    label: "Graduation Date",
-                    name: "graduationDate",
-                    widget: "date",
-                  },
+                  { label: "Graduation Date", name: "graduationDate", widget: "date" },
                 ],
             }
           - {

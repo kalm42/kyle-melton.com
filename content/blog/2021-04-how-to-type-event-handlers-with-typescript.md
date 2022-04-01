@@ -9,8 +9,10 @@ tags:
   - typescript
 thumbnail: /img/how-to-type-event-handlers-with-typescript.jpg
 thumbnailAlt: Planner with pens
+slug: how-to-type-event-handlers-with-typescript
 date: 2021-04-11T17:17:01.379Z
 ---
+
 Have you been writing Typescript not in a framework like React, Vue, Next, Angular, et al? Did you add an event listener only to get an error because the event is implicitly any? Here are your answers for what to type it. I'll update this as I stumble upon them.
 
 The 'click' event handler uses 'MouseEvent'.
@@ -20,7 +22,9 @@ The 'click' event handler uses 'MouseEvent'.
 ```html
 <button>Click Me</button>
 
-<script src="/foo.js">console.log('Lets just pretend our Typescript outputs to this file.')</script>
+<script src="/foo.js">
+  console.log('Lets just pretend our Typescript outputs to this file.')
+</script>
 ```
 
 ```typescript
@@ -37,7 +41,9 @@ The 'keydown' event handler uses 'KeyboardEvent'.
 ```html
 <button>Press space or enter</button>
 
-<script src="/foo.js">console.log('Lets just pretend our Typescript outputs to this file.')</script>
+<script src="/foo.js">
+  console.log('Lets just pretend our Typescript outputs to this file.')
+</script>
 ```
 
 ```typescript
@@ -54,7 +60,9 @@ Focus related events handler use 'FocusEvent'. Events like 'focus', 'focusin', '
 ```html
 <button>Press space or enter</button>
 
-<script src="/foo.js">console.log('Lets just pretend our Typescript outputs to this file.')</script>
+<script src="/foo.js">
+  console.log('Lets just pretend our Typescript outputs to this file.')
+</script>
 ```
 
 ```typescript

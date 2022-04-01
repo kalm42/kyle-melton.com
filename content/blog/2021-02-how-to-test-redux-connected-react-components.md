@@ -10,6 +10,7 @@ tags:
   - testing
 thumbnail: /img/how-to-test-redux-connected-react-components.png
 thumbnailAlt: A adutitorium style college classroom
+slug: how-to-test-redux-connected-react-components
 date: 2021-02-17T22:26:11.434Z
 ---
 
@@ -21,13 +22,13 @@ This is how to mock the redux state so that it get injected into your redux conn
 
 ```javascript
 // App.js
-import { connect } from "reat-redux"
+import { connect } from "reat-redux";
 
-const App = props => <div>{props.user}</div>
+const App = (props) => <div>{props.user}</div>;
 
-const mapStateToProps = state => state
+const mapStateToProps = (state) => state;
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);
 ```
 
 I know, it's amazing. Look at that elegance, the beauty in the simplicity. But go with it, pretend there's some complex logic and we need to get to some edge case. Now for the how we do that.
@@ -38,27 +39,20 @@ We extend the render method to provide an initial state for the store. BOOM inje
 
 ```javascript
 // render-util.js
-import React from "react"
-import { render } from "@testing-library/react"
-import { createStore } from "redux"
-import { Provider } from "react-redux"
-import reducer from "../reducer" // <- that's your reducer
+import React from "react";
+import { render } from "@testing-library/react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "../reducer"; // <- that's your reducer
 
-function extRender(
-  ui,
-  {
-    initialState,
-    store = createStore(reducer, initialState),
-    ...renderOptions
-  } = {}
-) {
+function extRender(ui, { initialState, store = createStore(reducer, initialState), ...renderOptions } = {}) {
   function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>
+    return <Provider store={store}>{children}</Provider>;
   }
-  return render(ui, { wrapper: Wrapper, ...renderOptions })
+  return render(ui, { wrapper: Wrapper, ...renderOptions });
 }
 
-export default extRender
+export default extRender;
 ```
 
 Then we take the extended render and use it to inject the initial state.
