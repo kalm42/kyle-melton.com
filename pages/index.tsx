@@ -31,7 +31,6 @@ const Home = (props: HomeProps) => {
           </h2>
           <h1>Kyle Front End Engineer.</h1>
           <div className="pb-20">
-            <p className="p-8">insert picture</p>
             <p className="pb-8">
               I love working with JavaScript, Node, GraphQL, Typescript, and React. The whole JAMStack is my ... jam. I
               have made express node REST api backends, GraphQL services. Headless WordPress sites with custom plugins
