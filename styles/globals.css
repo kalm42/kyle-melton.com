@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+  @apply pb-8;
+}
+
+h1 {
+  @apply text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left;
+}
+
+h2 {
+  @apply text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8;
+}
+
+h3 {
+  @apply text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2;
+}
+
+pre {
+  @apply bg-gray-100 border-l-4 border-gray-200 p-4 rounded-lg my-8 overflow-x-scroll;
+}

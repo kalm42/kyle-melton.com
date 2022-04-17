@@ -15,8 +15,10 @@ tags:
   - jwt
 thumbnail: /img/how-to-setup-signin-with-apple.png
 thumbnailAlt: Theatrical detective with the title text
+slug: how-to-setup-signin-with-apple
 date: 2022-02-20T17:35:36.756Z
 ---
+
 Here before you is a record of how I configured sign in with Apple for a side project I have. This, like all my posts, is a record for myself so that I can find everything again. There are a lot of links in here. I strive to cite all my sources. I don't know this stuff off the top of my head so I will show you where I got everything from.
 
 ## Front end-ish setup
@@ -35,16 +37,16 @@ To expose session and auth data to the front end so we start with `_app.tsx` (ye
 
 ```typescript
 // pages/_app.tsx
-import { SessionProvider } from "next-auth/react"
-import "../styles/globals.css"
-import type { AppProps } from "next/app"
+import { SessionProvider } from "next-auth/react";
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-	return (
-		<SessionProvider session={session}>
-			<Component {...pageProps} />
-		</SessionProvider>
-	)
+  return (
+    <SessionProvider session={session}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  );
 }
 ```
 
@@ -52,17 +54,17 @@ To have the back end respond to sign in, sign out, and oauth callbacks create th
 
 ```typescript
 // pages/api/auth/[...nextauth].ts
-import NextAuth from "next-auth"
-import AppleProvider from "next-auth/providers/apple"
+import NextAuth from "next-auth";
+import AppleProvider from "next-auth/providers/apple";
 
 export default NextAuth({
-	providers: [
-		AppleProvider({
-		    clientId: process.env.APPLE_CLIENT_ID!,
-		    clientSecret: process.env.APPLE_CLIENT_SECRET!,
-		}),
-	],
-})
+  providers: [
+    AppleProvider({
+      clientId: process.env.APPLE_CLIENT_ID!,
+      clientSecret: process.env.APPLE_CLIENT_SECRET!,
+    }),
+  ],
+});
 ```
 
 Edit your `.env.local` file. You need to add an `APPLE_CLIENT_ID` and `APPLE_CLIENT_SECRET`.
@@ -71,6 +73,7 @@ Edit your `.env.local` file. You need to add an `APPLE_CLIENT_ID` and `APPLE_CLI
 APPLE_CLIENT_ID=
 APPLE_CLIENT_SECRET=
 ```
+
 ## Getting The Client Id and Secret
 
 This is the first big hurdle. Now we need our Apple client id, and a secret. We have to get that from Apple. So go sign up for an Apple Developer account and pay our lord and master oh Apple their $99 a year taxes for our pleasure of being able to use their api's.
@@ -87,18 +90,18 @@ To make a Service ID it must be a service for an application so you must first m
 
 ### Register App ID
 
-* Go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources)
-* Go to Identifiers
-* Ensure you're on App IDs
-* Add a new one.
-* Type is App
-* Register
-  * Description: You know what this is.
-  * App ID: Use reverse domain style. aka `com.example`
-  * Check sign in with apple
-  * Edit
-    * Enable as primary App ID
-    * Add notification endpoint `https://www.example.com/api/auth/apple/`
+- Go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources)
+- Go to Identifiers
+- Ensure you're on App IDs
+- Add a new one.
+- Type is App
+- Register
+  - Description: You know what this is.
+  - App ID: Use reverse domain style. aka `com.example`
+  - Check sign in with apple
+  - Edit
+    - Enable as primary App ID
+    - Add notification endpoint `https://www.example.com/api/auth/apple/`
 
 ### Register Services ID aka Client ID
 
@@ -107,7 +110,7 @@ Still in that "Certificates, Identifiers & Profiles" on the left menu go to Iden
 Description: You know what to do.
 Identifier: reverse domain style `com.example.client`
 
-Enable Sign in with Apple. Click configure. 
+Enable Sign in with Apple. Click configure.
 
 Now here's the that they don't tell you. Domains gets only the domain. No protocol. Not `https://www.example.com` but `example.com`. The return url for next-auth is `https://www.example.com/api/auth/callback/apple`.
 
@@ -123,7 +126,7 @@ APPLE_CLIENT_ID=com.example.client
 
 From the Identifiers screen change from AppID to Merchant. Add a new merchant. Same process. You know what a description is and the same reverse domain style. Yes it needs to be unique, maybe `com.example.merchant`.
 
-Follow the instructions to verify. To complete this your nextjs project must be live on the web. I was trying to avoid this but /shrug/. 
+Follow the instructions to verify. To complete this your nextjs project must be live on the web. I was trying to avoid this but /shrug/.
 
 ### Get key from apple
 
@@ -139,33 +142,33 @@ There are instructions [here](https://developer.apple.com/documentation/sign_in_
 
 ```javascript
 // apple-gen-secret.js
-const nJwt = require("njwt")
-const dotenv = require("dotenv")
-const { createPrivateKey } = require("crypto")
+const nJwt = require("njwt");
+const dotenv = require("dotenv");
+const { createPrivateKey } = require("crypto");
 
-dotenv.config({ path: ".env.local" })
+dotenv.config({ path: ".env.local" });
 
-const MINUTE = 60
-const HOUR = 60 * MINUTE
-const DAY = 24 * HOUR
-const MONTH = 30 * DAY
+const MINUTE = 60;
+const HOUR = 60 * MINUTE;
+const DAY = 24 * HOUR;
+const MONTH = 30 * DAY;
 
-const privateKey = createPrivateKey(``) // Copy from the cert you downloaded from Apple
-const now = Math.ceil(Date.now() / 1000)
-const expires = now + MONTH * 3
+const privateKey = createPrivateKey(``); // Copy from the cert you downloaded from Apple
+const now = Math.ceil(Date.now() / 1000);
+const expires = now + MONTH * 3;
 
 const claims = {
-	iss: process.env.APPLE_TEAM_ID,
-	iat: now,
-	exp: expires,
-	aud: "https://appleid.apple.com",
-	sub: process.env.APPLE_CLIENT_ID,
-}
+  iss: process.env.APPLE_TEAM_ID,
+  iat: now,
+  exp: expires,
+  aud: "https://appleid.apple.com",
+  sub: process.env.APPLE_CLIENT_ID,
+};
 
-const jwt = nJwt.create(claims, privateKey, "ES256")
-jwt.header.kid = kid
+const jwt = nJwt.create(claims, privateKey, "ES256");
+jwt.header.kid = kid;
 
-console.log(jwt.compact())
+console.log(jwt.compact());
 ```
 
 This was cobbled together from [this gist](https://gist.github.com/balazsorban44/09613175e7b37ec03f676dcefb7be5eb) and [this blog post](https://developer.okta.com/blog/2018/11/13/create-and-verify-jwts-with-node). I went with the packages from the Okta blog post because Okta does authentication and if their employees vouch for nJwt that's good enough for me. To complete the script you're going to need to copy the key you got from Apple. Here's the command I used to do that.
@@ -192,7 +195,7 @@ A longer explanation for the JWT steps in the script. In the order from the scri
 
 1. iss - issuer: This is the 10 characters next to your name [here](https://developer.apple.com/account/resources/certificates/list). This is you. You are issuing the JWT.
 
-2. iat - Issued at: registered claim indicates the time at which you generated the client secret, in terms of the number of *seconds* since Epoch, in UTC. Seconds is important. Javascript makes timestamps in the number of milliseconds since Epoch. That's why we divide by 1000 and then round.
+2. iat - Issued at: registered claim indicates the time at which you generated the client secret, in terms of the number of _seconds_ since Epoch, in UTC. Seconds is important. Javascript makes timestamps in the number of milliseconds since Epoch. That's why we divide by 1000 and then round.
 
 3. exp - Expires: We take the current time stamp in seconds and add 3 months of seconds to it.
 
@@ -235,7 +238,7 @@ NEXTAUTH_SECRET=WHAT-YOU-JUST-PASTED
 
 ## Server setup
 
-Per the [Next-Auth docs](https://next-auth.js.org/providers/apple) Apple requires a https connection. That means localhost or 0.0.0.0 is not going to work. But oh, we are programmers and we can wield magic (not magick). So we're going to edit our hosts file and make our localhost respond to our domain. 
+Per the [Next-Auth docs](https://next-auth.js.org/providers/apple) Apple requires a https connection. That means localhost or 0.0.0.0 is not going to work. But oh, we are programmers and we can wield magic (not magick). So we're going to edit our hosts file and make our localhost respond to our domain.
 
 I’m only including the Mac/Linux instructions here because I don’t develop on windows. Windows is for games only.
 
