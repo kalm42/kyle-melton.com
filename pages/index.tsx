@@ -69,7 +69,7 @@ const Home = (props: HomeProps) => {
             <h3>Contact Me.</h3>
             <ul>
               <li>
-                P: <a href="tel:+19512127174">951-212-7174</a>
+                P: <a href="tel:+15414440699">541-444-0699</a>
               </li>
               <li>
                 E: <a href="mailto:kyle@kyle-melton.com">kyle@kyle-melton.com</a>
