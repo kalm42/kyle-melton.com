@@ -17,3 +17,7 @@ h2 {
 h3 {
   @apply text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2;
 }
+
+pre {
+  @apply bg-gray-100 border-l-4 border-gray-200 p-4 rounded-lg my-8 overflow-x-scroll;
+}

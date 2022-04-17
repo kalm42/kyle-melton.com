@@ -31,16 +31,13 @@ const Home = (props: HomeProps) => {
           </h2>
           <h1>Kyle Front End Engineer.</h1>
           <div className="pb-20">
-            <p className="pb-8">insert picture</p>
+            <p className="p-8">insert picture</p>
             <p className="pb-8">
               I love working with JavaScript, Node, GraphQL, Typescript, and React. The whole JAMStack is my ... jam. I
               have made express node REST api backends, GraphQL services. Headless WordPress sites with custom plugins
               and custom post types. For a while I wrote custom PHP software. I have a couple of Swift for iOS tutorials
-              on YouTube. I just love learning new things and getting good, nay - great.
-            </p>
-            <p>
-              I have made websites on the side for a long time in 2018 I took the leap and I have been doing it full
-              time.
+              on YouTube. I just love learning and making cool stuff. If you&apos;re making cool stuff and want me to
+              help then get in touch.
             </p>
             <p>
               I hate saying the standard things like &lsquo;I&lsquo;m a hard worker&rsquo;, and &lsquo;I follow through
@@ -51,10 +48,12 @@ const Home = (props: HomeProps) => {
             </p>
           </div>
           <section>
-            <h3>Latest Blog Posts.</h3>
-            {posts.map((post) => (
-              <PostTeaser post={post} key={post.data.slug} />
-            ))}
+            <h3 className="pb-16">Latest Blog Posts.</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {posts.map((post) => (
+                <PostTeaser post={post} key={post.data.slug} />
+              ))}
+            </div>
             <p>
               <Link href={"/blog"}>
                 <a className={cn("border-2", "border-black", "p-4", "rounded", "hover:underline")}>See all posts.</a>
