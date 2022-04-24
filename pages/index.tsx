@@ -2,9 +2,6 @@ import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import cn from "classnames";
-import H1 from "../components/base/H1";
-import H2 from "../components/base/H2";
-import H3 from "../components/base/H3";
 import Container from "../components/Container";
 import { getLast3Posts, Items } from "../lib/posts";
 import PostTeaser from "../components/PostTeaser";
@@ -15,7 +12,7 @@ interface HomeProps {
 const Home = (props: HomeProps) => {
   const { posts } = props;
   return (
-    <div>
+    <div className="dark:bg-zinc-900 dark:text-slate-300 pt-5">
       <Head>
         <title>Kyle - Front End Engineer</title>
         <meta name="description" content="Kyle is a front end engineer who is a react subject matter expert." />

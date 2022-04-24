@@ -19,5 +19,5 @@ h3 {
 }
 
 pre {
-  @apply bg-gray-100 border-l-4 border-gray-200 p-4 rounded-lg my-8 overflow-x-scroll;
+  @apply bg-gray-100 dark:bg-black border-l-4 border-gray-800 p-4 rounded-lg my-8 overflow-x-scroll;
 }
