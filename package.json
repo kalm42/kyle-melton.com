@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sentry/nextjs": "^8.35.0",
+    "@sentry/nextjs": "^8.36.0",
     "@tanstack/react-query": "^4.35.3",
     "@trpc/client": "^10.45.2",
     "@trpc/next": "^10.45.2",
