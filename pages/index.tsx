@@ -1,11 +1,22 @@
-import type { GetStaticProps } from "next";
+import { createGhostApiClient } from "@/lib/ghost";
+import { helpers } from "@/server/routers";
+import { PostsOrPages } from "@tryghost/content-api";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  return { props: { posts: [] } };
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const ghost = createGhostApiClient();
+  const posts = await ghost.posts.browse({ limit: "all" });
+
+  return { props: { posts } };
 };
 
-const Home = () => {
+interface HomeProps {
+  posts: PostsOrPages;
+}
+
+const Home = (props: HomeProps) => {
+  const { posts } = props;
   return (
     <div className="dark:bg-zinc-900 dark:text-slate-300 pt-5">
       <Head>
@@ -15,6 +26,7 @@ const Home = () => {
       </Head>
       <main>
         <h1>Coming soon</h1>
+        <pre>{JSON.stringify(posts, null, 2)}</pre>
       </main>
     </div>
   );

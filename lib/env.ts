@@ -72,4 +72,20 @@ export class ServerEnvironmentVariables {
     }
     return [token, null];
   }
+
+  public static get GHOST_URL(): Result<string> {
+    const token = process.env.GHOST_URL;
+    if (!token) {
+      return [null, new Error("GHOST_URL is not defined")];
+    }
+    return [token, null];
+  }
+
+  public static get GHOST_CONTENT_API_KEY(): Result<string> {
+    const token = process.env.GHOST_CONTENT_API_KEY;
+    if (!token) {
+      return [null, new Error("GHOST_CONTENT_API_KEY is not defined")];
+    }
+    return [token, null];
+  }
 }

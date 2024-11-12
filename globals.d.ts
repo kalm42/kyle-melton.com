@@ -12,5 +12,7 @@ namespace NodeJS {
     NEXT_PUBLIC_SENTRY_ORG?: string;
     NEXT_PUBLIC_PROJECT_ID?: string;
     // Ghost, TBD
+    GHOST_URL?: string;
+    GHOST_CONTENT_API_KEY?: string;
   }
 }
